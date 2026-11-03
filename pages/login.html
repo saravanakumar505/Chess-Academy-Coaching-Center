@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login | Chess Academy</title>
+  <meta name="description" content="Sign in to your Chess Academy student dashboard to access class schedules, tournament brackets, and grandmaster study materials.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+<body data-page="auth" class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 min-h-screen flex flex-col justify-between selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Minimal Top Header for Auth -->
+  <header class="py-6 px-4 sm:px-8 border-b border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-[#0B1220]/50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#14213D] to-[#2563EB] flex items-center justify-center text-[#D6A84F] shadow">
+          <i class="fa-solid fa-chess-knight"></i>
+        </div>
+        <span class="font-serif-title text-lg font-bold tracking-wider text-slate-900 dark:text-white">
+          CHESS <span class="text-[#D6A84F]">ACADEMY</span>
+        </span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <button type="button" class="rtl-toggle-btn px-2.5 py-1 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="theme-toggle-btn p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 w-8 h-8 flex items-center justify-center">
+          <i class="fa-solid fa-sun text-[#D6A84F] text-xs theme-sun-icon hidden"></i>
+          <i class="fa-solid fa-moon text-blue-400 text-xs theme-moon-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Auth Section -->
+  <main class="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div class="w-full max-w-md bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 p-8 sm:p-10">
+      
+      <div class="mb-8 text-center">
+        <div class="w-12 h-12 rounded-2xl bg-[#D6A84F]/15 text-[#D6A84F] flex items-center justify-center mx-auto mb-4 text-2xl shadow-sm">
+          <i class="fa-solid fa-chess-knight"></i>
+        </div>
+        <h2 class="font-serif-title text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
+          Student Sign In
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500">
+          Welcome back to your Chess Academy training portal.
+        </p>
+      </div>
+
+      <form id="login-form" class="space-y-5">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Email or Student ID</label>
+          <div class="relative">
+            <i class="fa-solid fa-envelope absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 transform -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input type="text" id="login-email" required placeholder="student@chessacademy.com" value="student@chessacademy.com" class="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Password</label>
+            <a href="forgot-password.html" class="text-xs text-[#2563EB] dark:text-blue-400 hover:text-[#D6A84F] font-semibold">
+              Forgot Password?
+            </a>
+          </div>
+          <div class="relative">
+            <i class="fa-solid fa-lock absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 transform -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input type="password" id="login-password" required placeholder="••••••••" value="demo1234" class="w-full pl-10 pr-10 rtl:pl-10 rtl:pr-10 py-3 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+            <button type="button" class="password-toggle-btn absolute right-3.5 rtl:right-auto rtl:left-3.5 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600 focus:outline-none">
+              <i class="fa-solid fa-eye text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs">
+          <label class="flex items-center gap-2 cursor-pointer select-none text-slate-600 dark:text-slate-400">
+            <input type="checkbox" checked class="rounded border-slate-300 text-[#D6A84F] focus:ring-[#D6A84F]">
+            <span>Remember me for 30 days</span>
+          </label>
+          <span class="text-emerald-500 font-semibold">(Demo prefilled)</span>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-slate-950 bg-[#D6A84F] hover:bg-[#B88B32] shadow-lg shadow-[#D6A84F]/30 transition-all text-sm flex items-center justify-center gap-2">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <span>Sign In to Dashboard</span>
+        </button>
+      </form>
+
+      <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500">
+        Don't have a student account yet? 
+        <a href="register.html" class="font-bold text-[#2563EB] dark:text-blue-400 hover:text-[#D6A84F] ml-1">
+          Create an Account
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Auth Footer -->
+  <footer class="py-4 text-center text-xs text-slate-500 border-t border-slate-200 dark:border-slate-800">
+    &copy; 2026 Chess Academy & Coaching Center. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/forms.js"></script>
+</body>
+</html>
+

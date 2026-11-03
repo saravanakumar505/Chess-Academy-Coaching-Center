@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration | Chess Academy</title>
+  <meta name="description" content="Register as a student at Chess Academy: choose your skill level, select your training format, and join Grandmaster mentorship batches.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+<body data-page="auth" class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 min-h-screen flex flex-col justify-between selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Minimal Top Header for Auth -->
+  <header class="py-6 px-4 sm:px-8 border-b border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-[#0B1220]/50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#14213D] to-[#2563EB] flex items-center justify-center text-[#D6A84F] shadow">
+          <i class="fa-solid fa-chess-knight"></i>
+        </div>
+        <span class="font-serif-title text-lg font-bold tracking-wider text-slate-900 dark:text-white">
+          CHESS <span class="text-[#D6A84F]">ACADEMY</span>
+        </span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <button type="button" class="rtl-toggle-btn px-2.5 py-1 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="theme-toggle-btn p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 w-8 h-8 flex items-center justify-center">
+          <i class="fa-solid fa-sun text-[#D6A84F] text-xs theme-sun-icon hidden"></i>
+          <i class="fa-solid fa-moon text-blue-400 text-xs theme-moon-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Register Form Container -->
+  <main class="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div class="w-full max-w-5xl bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 grid grid-cols-1 lg:grid-cols-12">
+      
+      <!-- Left: Visual Side with Real Photo -->
+      <div class="lg:col-span-5 relative hidden lg:block overflow-hidden">
+        <img src="../assets/images/about/academy-training.jpg" alt="Chess Academy Students" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/60 to-transparent"></div>
+        <div class="absolute bottom-10 left-8 right-8 text-white">
+          <div class="w-10 h-10 rounded-xl bg-[#D6A84F]/20 text-[#D6A84F] flex items-center justify-center mb-4 text-xl">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="font-serif-title text-2xl font-bold mb-2">Join the Academy</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Begin with a free tactical rating diagnostic, personalized coach matching, and interactive digital chessboard tools.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="lg:col-span-7 p-8 sm:p-12">
+        <div class="max-w-md mx-auto w-full">
+          
+          <div class="mb-6">
+            <h2 class="font-serif-title text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
+              Create Student Account
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500">
+              Start your journey toward chess mastery with Grandmaster mentorship.
+            </p>
+          </div>
+
+          <form id="register-form" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Student Full Name *</label>
+              <input type="text" id="reg-name" required placeholder="David Kim" value="David Kim" class="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address *</label>
+                <input type="email" id="reg-email" required placeholder="david@example.com" value="david.kim@chessacademy.com" class="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
+                <input type="tel" id="reg-phone" placeholder="+1 (555) 000-0000" value="+1 (555) 345-6789" class="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Skill Level</label>
+                <select id="reg-skill" class="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+                  <option>Beginner (Unrated - 1200)</option>
+                  <option selected>Intermediate (1200 - 1700)</option>
+                  <option>Advanced (1700 - 2100)</option>
+                  <option>Master / Title Candidate (2100+)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Learning Format</label>
+                <select id="reg-format" class="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+                  <option>Online Live Interactive</option>
+                  <option>Campus Academy (In-Person)</option>
+                  <option selected>Hybrid (Online + Sparring Days)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Password *</label>
+                <input type="password" id="reg-password" required placeholder="••••••••" value="demo1234" class="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Confirm Password *</label>
+                <input type="password" id="reg-confirm-password" required placeholder="••••••••" value="demo1234" class="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <label class="flex items-start gap-2.5 cursor-pointer text-xs text-slate-600 dark:text-slate-400">
+                <input type="checkbox" id="reg-terms" checked class="mt-0.5 rounded border-slate-300 text-[#D6A84F] focus:ring-[#D6A84F]">
+                <span>I agree to the Academy Terms & Conditions, Fair Play Rules, and Privacy Policy.</span>
+              </label>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-slate-950 bg-[#D6A84F] hover:bg-[#B88B32] shadow-lg shadow-[#D6A84F]/30 transition-all text-sm flex items-center justify-center gap-2 mt-4">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Create Account & Enter Dashboard</span>
+            </button>
+          </form>
+
+          <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500">
+            Already have an account? 
+            <a href="login.html" class="font-bold text-[#2563EB] dark:text-blue-400 hover:text-[#D6A84F] ml-1">
+              Sign In
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Auth Footer -->
+  <footer class="py-4 text-center text-xs text-slate-500 border-t border-slate-200 dark:border-slate-800">
+    &copy; 2026 Chess Academy & Coaching Center. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/forms.js"></script>
+</body>
+</html>
+

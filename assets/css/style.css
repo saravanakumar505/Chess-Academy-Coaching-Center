@@ -1,0 +1,191 @@
+/* ==========================================================================
+   CHESS ACADEMY - MAIN STYLESHEET
+   Deep Navy: #14213D | Royal Blue: #2563EB | Gold: #D6A84F
+   Dark BG: #0B1220 | Light BG: #F8FAFC
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&display=swap');
+
+:root {
+  --color-primary: #14213d;
+  --color-primary-dark: #0b1220;
+  --color-accent: #d6a84f;
+  --color-accent-hover: #b88b32;
+  --color-secondary: #2563eb;
+  --color-text-light: #172033;
+  --color-text-dark: #e2e8f0;
+  --color-bg-light: #f8fafc;
+  --color-bg-dark: #0b1220;
+  --color-card-dark: #131c2e;
+  --color-card-light: #ffffff;
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+.font-serif-title {
+  font-family: 'Cinzel', serif, Georgia;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Sticky / Fixed Navbar ──────────────────────────────────────────────── */
+/* The #site-header wrapper must not interfere with the nav's sticky position */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+}
+
+#site-header #main-nav {
+  position: relative; /* nav sits inside already-sticky header */
+  top: auto;
+  width: 100%;
+}
+
+/* Ensure body does NOT clip the sticky header */
+body {
+  overflow-x: hidden; /* prevent horizontal scroll, keep vertical sticky working */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1220;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6a84f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b88b32;
+}
+
+/* Chessboard pattern background generator */
+.chessboard-pattern {
+  background-image: 
+    linear-gradient(45deg, rgba(214, 168, 79, 0.04) 25%, transparent 25%), 
+    linear-gradient(-45deg, rgba(214, 168, 79, 0.04) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, rgba(214, 168, 79, 0.04) 75%), 
+    linear-gradient(-45deg, transparent 75%, rgba(214, 168, 79, 0.04) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+.dark .chessboard-pattern {
+  background-image: 
+    linear-gradient(45deg, rgba(214, 168, 79, 0.03) 25%, transparent 25%), 
+    linear-gradient(-45deg, rgba(214, 168, 79, 0.03) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, rgba(214, 168, 79, 0.03) 75%), 
+    linear-gradient(-45deg, transparent 75%, rgba(214, 168, 79, 0.03) 75%);
+  background-size: 40px 40px;
+}
+
+/* Glassmorphism Cards */
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fce09b 0%, #d6a84f 50%, #9e7323 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-gradient-text {
+  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 50%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow:hover {
+  border-color: #d6a84f;
+  box-shadow: 0 10px 25px -5px rgba(214, 168, 79, 0.25);
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(11, 18, 32, 0.95);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+/* RTL Layout adjustments */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Badge pulse */
+.pulse-badge {
+  animation: pulseGold 2s infinite;
+}
+
+@keyframes pulseGold {
+  0% { box-shadow: 0 0 0 0 rgba(214, 168, 79, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(214, 168, 79, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(214, 168, 79, 0); }
+}
+
+
+
+/* Ensure gold buttons and active filter tabs always maintain high-contrast dark text, even when hovered */
+button.bg-\[\#D6A84F\],
+button.bg-\[\#D6A84F\]:hover,
+a.bg-\[\#D6A84F\],
+a.bg-\[\#D6A84F\]:hover,
+.day-tab-btn.bg-\[\#D6A84F\],
+.day-tab-btn.bg-\[\#D6A84F\]:hover,
+.program-filter-btn.bg-\[\#D6A84F\],
+.program-filter-btn.bg-\[\#D6A84F\]:hover,
+.tournament-filter-btn.bg-\[\#D6A84F\],
+.tournament-filter-btn.bg-\[\#D6A84F\]:hover,
+.gallery-tab-btn.bg-\[\#D6A84F\],
+.gallery-tab-btn.bg-\[\#D6A84F\]:hover {
+  color: #0f172a !important;
+  background-color: #d6a84f !important;
+}
+
+/* Inactive filter buttons hover */
+.day-tab-btn:hover:not(.bg-\[\#D6A84F\]),
+.program-filter-btn:hover:not(.bg-\[\#D6A84F\]),
+.tournament-filter-btn:hover:not(.bg-\[\#D6A84F\]),
+.gallery-tab-btn:hover:not(.bg-\[\#D6A84F\]) {
+  color: #d6a84f !important;
+}

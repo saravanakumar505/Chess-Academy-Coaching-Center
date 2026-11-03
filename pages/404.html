@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkmate! Page Not Found (404) | Chess Academy</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+<body data-page="404" class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 min-h-screen flex flex-col justify-between selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Shared Header Container -->
+  <div id="site-header"></div>
+
+  <!-- 404 Main Section -->
+  <main class="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div class="max-w-xl mx-auto text-center py-12">
+      
+      <div class="w-24 h-24 rounded-3xl bg-amber-500/10 text-[#D6A84F] flex items-center justify-center text-5xl mx-auto mb-6 shadow-inner pulse-badge">
+        <i class="fa-solid fa-chess-king"></i>
+      </div>
+
+      <div class="text-[#D6A84F] font-black text-6xl sm:text-7xl font-serif-title mb-2">404</div>
+      <h1 class="font-serif-title text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-4">
+        Checkmate! That Square Does Not Exist
+      </h1>
+      <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed mb-8 max-w-md mx-auto">
+        The piece you moved appears to be outside the boundaries of the board. Return to our home territory and resume your training.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="../index.html" class="px-7 py-3 rounded-xl font-bold text-slate-950 bg-[#D6A84F] hover:bg-[#B88B32] shadow-lg transition-all flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-house"></i>
+          <span>Return to Homepage</span>
+        </a>
+        <a href="programs.html" class="px-7 py-3 rounded-xl font-semibold text-slate-800 dark:text-slate-200 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all text-sm">
+          Browse Programs
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Shared Footer Container -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

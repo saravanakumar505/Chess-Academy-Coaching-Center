@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | Chess Academy</title>
+  <meta name="description" content="Chess Academy student learning portal: enrolled batches, weekly schedule, rating progress, and tournament registrations.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../../assets/js/theme.js"></script>
+  <script src="../../assets/js/rtl.js"></script>
+</head>
+<body data-dash="overview" class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 min-h-screen flex selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Mobile Sidebar Overlay Backdrop -->
+  <div id="dashboard-sidebar-overlay" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-40 hidden lg:hidden"></div>
+
+  <!-- Dashboard Sidebar -->
+  <aside id="dashboard-sidebar" class="fixed top-0 bottom-0 left-0 rtl:left-auto rtl:right-0 w-64 bg-white dark:bg-[#0E1726] border-r rtl:border-r-0 rtl:border-l border-slate-200 dark:border-slate-800 flex flex-col justify-between z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0 transition-transform duration-300">
+    <div>
+      <!-- Sidebar Brand Header -->
+      <div class="h-20 flex items-center justify-between px-6 border-b border-slate-200 dark:border-slate-800">
+        <a href="../../index.html" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#14213D] to-[#2563EB] flex items-center justify-center text-[#D6A84F] text-lg shadow border border-[#D6A84F]/30">
+            <i class="fa-solid fa-chess-knight"></i>
+          </div>
+          <span class="font-serif-title font-bold text-base text-slate-900 dark:text-white tracking-wider">
+            CHESS <span class="text-[#D6A84F]">ACADEMY</span>
+          </span>
+        </a>
+        <button type="button" id="dashboard-sidebar-close" class="lg:hidden text-slate-400 hover:text-slate-200 p-1">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="p-4 space-y-1.5 text-xs font-semibold text-slate-600 dark:text-slate-400">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-[#D6A84F]/10 text-[#D6A84F] font-bold">
+          <i class="fa-solid fa-gauge-high w-4 text-center"></i>
+          <span>Overview</span>
+        </a>
+        <a href="my-batches.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <i class="fa-solid fa-users-rectangle w-4 text-center"></i>
+          <span>My Batches</span>
+        </a>
+        <a href="schedule.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <i class="fa-solid fa-calendar-days w-4 text-center"></i>
+          <span>Schedule</span>
+        </a>
+        <a href="tournaments.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <i class="fa-solid fa-trophy w-4 text-center"></i>
+          <span>Tournaments</span>
+        </a>
+        <a href="progress.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <i class="fa-solid fa-chart-line w-4 text-center"></i>
+          <span>Progress & Elo</span>
+        </a>
+        <a href="certificates.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <i class="fa-solid fa-award w-4 text-center"></i>
+          <span>Certificates</span>
+        </a>
+        <a href="payments.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <i class="fa-solid fa-receipt w-4 text-center"></i>
+          <span>Payments</span>
+        </a>
+        <a href="notifications.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+            <i class="fa-solid fa-bell w-4 text-center"></i>
+            <span>Notifications</span>
+          </div>
+          <span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px] font-bold">3</span>
+        </a>
+        <a href="profile.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <i class="fa-solid fa-user-gear w-4 text-center"></i>
+          <span>My Profile</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bottom Sidebar Utility -->
+    <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+      <a href="../login.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-rose-500 hover:bg-rose-500/10 transition-colors text-xs font-bold">
+        <i class="fa-solid fa-arrow-right-from-bracket w-4 text-center rtl:rotate-180"></i>
+        <span>Sign Out</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <div class="flex-1 flex flex-col lg:pl-64 rtl:lg:pl-0 rtl:lg:pr-64 min-w-0 transition-all">
+    
+    <!-- Top Dashboard Header Bar -->
+    <header class="h-16 sm:h-20 bg-white/95 dark:bg-[#0E1726]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-3 sm:px-6 lg:px-8 flex items-center justify-between sticky top-0 z-30">
+      <div class="flex items-center gap-2 sm:gap-4 min-w-0 flex-1 mr-2 rtl:mr-0 rtl:ml-2">
+        <button type="button" id="dashboard-sidebar-toggle" class="lg:hidden p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+        <div class="min-w-0">
+          <h1 class="font-serif-title font-bold text-xs sm:text-base lg:text-lg text-slate-900 dark:text-white truncate">Student Dashboard</h1>
+          <p class="text-xs text-slate-500 hidden sm:block">Welcome back, David! Ready for today's tactical lessons?</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+        <!-- RTL Toggle -->
+        <button type="button" class="rtl-toggle-btn px-2 py-1 text-[11px] sm:text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center shrink-0">
+          <i class="fa-solid fa-sun text-[#D6A84F] text-xs theme-sun-icon hidden"></i>
+          <i class="fa-solid fa-moon text-blue-400 text-xs theme-moon-icon"></i>
+        </button>
+
+        <!-- Notification Bell & Dropdown -->
+        <div class="relative">
+          <button type="button" id="notif-menu-btn" class="rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 relative w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-bell text-xs"></i>
+            <span id="notif-badge-count" class="absolute -top-1 -right-1 w-4 h-4 bg-blue-600 text-white rounded-full text-[9px] font-bold flex items-center justify-center">3</span>
+          </button>
+          
+          <div id="notif-dropdown" class="absolute right-0 rtl:right-auto rtl:left-0 mt-2 w-80 bg-white dark:bg-[#131C2E] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl z-50 p-4 hidden">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+              <span class="font-bold text-xs text-slate-900 dark:text-white">Recent Alerts</span>
+              <button type="button" id="mark-all-read-btn" class="text-[11px] text-[#2563EB] hover:underline font-semibold">Mark all read</button>
+            </div>
+            <div class="py-2 space-y-2 text-xs">
+              <a href="notifications.html" class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/60 block hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div class="font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-500 unread-dot"></span>
+                  <span>Class in 3 Hours</span>
+                </div>
+                <div class="text-[11px] text-slate-500 mt-0.5">Positional Strategy with GM Alexander.</div>
+              </a>
+              <a href="notifications.html" class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/60 block hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div class="font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#D6A84F] unread-dot"></span>
+                  <span>Tournament Pairing Posted</span>
+                </div>
+                <div class="text-[11px] text-slate-500 mt-0.5">Winter Grand Prix Round 1 pairings live.</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Mini Profile Pill -->
+        <a href="profile.html" class="flex items-center gap-2 shrink-0 pr-1 sm:pr-0 rtl:pr-0 rtl:pl-1">
+          <img src="../../assets/images/dashboard/student-avatar.jpg" alt="David Kim" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl object-cover border border-[#D6A84F] shrink-0">
+          <div class="hidden md:block text-left rtl:text-right">
+            <div class="font-bold text-xs text-slate-900 dark:text-white leading-tight">David Kim</div>
+            <div class="text-[10px] text-[#D6A84F] font-semibold">FIDE: 1510 Elo</div>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Dashboard Viewport -->
+    <main class="p-4 sm:p-8 space-y-8 flex-1">
+      
+      <!-- Welcome Banner Card with Visual -->
+      <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#14213D] via-[#1E3A8A] to-[#0B1220] p-6 sm:p-8 text-white shadow-xl border border-white/10">
+        <div class="relative z-10 max-w-2xl">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D6A84F]/20 text-[#D6A84F] text-[11px] font-bold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-graduation-cap"></i> Active Cohort: Intermediate Batch A
+          </span>
+          <h2 class="font-serif-title text-2xl sm:text-3xl font-bold mb-2">
+            Next Session: Positional Pawn Outposts
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 mb-6 leading-relaxed">
+            Live with <strong>GM Alexander Ivanov</strong> today at 06:00 PM EST. Homework review & tactical candidate move drills.
+          </p>
+          <div class="flex flex-wrap items-center gap-3">
+            <button type="button" onclick="showToast('Connecting to Grandmaster Live Interactive Board...', 'success')" class="px-5 py-2.5 rounded-xl bg-[#D6A84F] hover:bg-[#B88B32] text-slate-950 font-bold text-xs shadow flex items-center gap-2">
+              <i class="fa-solid fa-video"></i>
+              <span>Join Live Classroom</span>
+            </button>
+            <a href="batch-details.html" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors">
+              View Batch Syllabus
+            </a>
+          </div>
+        </div>
+
+        <div class="absolute right-0 bottom-0 top-0 w-80 opacity-20 pointer-events-none hidden md:block">
+          <img src="../../assets/images/dashboard/chess-practice.jpg" alt="Chess Practice" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#131C2E] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-xs text-slate-500">Current Rating</span>
+            <i class="fa-solid fa-chart-line text-[#D6A84F]"></i>
+          </div>
+          <div class="font-serif-title text-2xl font-black text-slate-900 dark:text-white">1,510</div>
+          <span class="text-[11px] text-emerald-500 font-bold"><i class="fa-solid fa-arrow-up mr-1"></i> +90 pts this season</span>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#131C2E] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-xs text-slate-500">Attendance Rate</span>
+            <i class="fa-solid fa-circle-check text-blue-500"></i>
+          </div>
+          <div class="font-serif-title text-2xl font-black text-slate-900 dark:text-white">96%</div>
+          <span class="text-[11px] text-slate-400">23 of 24 sessions completed</span>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#131C2E] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-xs text-slate-500">Puzzles Solved</span>
+            <i class="fa-solid fa-puzzle-piece text-purple-500"></i>
+          </div>
+          <div class="font-serif-title text-2xl font-black text-slate-900 dark:text-white">418</div>
+          <span class="text-[11px] text-purple-400 font-semibold">Tactics accuracy: 84%</span>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#131C2E] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-xs text-slate-500">Certificates Earned</span>
+            <i class="fa-solid fa-award text-emerald-500"></i>
+          </div>
+          <div class="font-serif-title text-2xl font-black text-slate-900 dark:text-white">2</div>
+          <a href="certificates.html" class="text-[11px] text-blue-500 hover:underline">View accredited PDF</a>
+        </div>
+
+      </div>
+
+      <!-- Middle Two-Column Grid: Classes / Schedule & Tournaments -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left 7 Cols: Enrolled Batches & Upcoming Classes -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-white dark:bg-[#131C2E] p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-serif-title text-lg font-bold text-slate-900 dark:text-white">Enrolled Programs</h3>
+              <a href="my-batches.html" class="text-xs font-bold text-[#D6A84F] hover:underline">View Details</a>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+                <img src="../../assets/images/programs/intermediate-chess.jpg" alt="Intermediate Strategy" class="w-14 h-14 rounded-xl object-cover shrink-0">
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900 dark:text-white">Positional Strategy & Opening Repertoire</h4>
+                  <p class="text-xs text-slate-500">Instructor: GM Alexander Ivanov • Mon & Wed 6:00 PM</p>
+                </div>
+              </div>
+              <a href="batch-details.html" class="px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-white font-bold text-xs text-center hover:bg-[#D6A84F] hover:text-slate-950 transition-colors shrink-0">
+                Course Hub
+              </a>
+            </div>
+          </div>
+
+          <!-- Rating Progression Mini Chart -->
+          <div class="bg-white dark:bg-[#131C2E] p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex items-center justify-between mb-6 pb-2 border-b border-slate-100 dark:border-slate-800/80">
+              <h3 class="font-serif-title text-base sm:text-lg font-bold text-slate-900 dark:text-white">2026 Elo Rating Trajectory</h3>
+              <a href="progress.html" class="text-xs font-bold text-blue-500 hover:underline">Full Analytics</a>
+            </div>
+            <div id="progress-bar-chart"></div>
+          </div>
+        </div>
+
+        <!-- Right 5 Cols: Upcoming Tournaments & Quick Tactics -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Upcoming Tournaments Card -->
+          <div class="bg-white dark:bg-[#131C2E] p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-serif-title text-lg font-bold text-slate-900 dark:text-white">Registered Tournaments</h3>
+              <a href="tournaments.html" class="text-xs font-bold text-[#D6A84F] hover:underline">Browse All</a>
+            </div>
+
+            <div class="space-y-3">
+              <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-bold text-[#D6A84F] uppercase">FIDE Rated</span>
+                  <h4 class="font-bold text-xs text-slate-900 dark:text-white">Autumn Grandmaster Open</h4>
+                  <p class="text-[11px] text-slate-500">Nov 28 • Confirmed Competitor</p>
+                </div>
+                <a href="tournament-registration.html" class="px-3 py-1.5 rounded-lg bg-[#2563EB] text-white font-bold text-[11px]">Pass</a>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-bold text-blue-400 uppercase">Rapid Cup</span>
+                  <h4 class="font-bold text-xs text-slate-900 dark:text-white">Metropolitan Lightning Blitz</h4>
+                  <p class="text-[11px] text-slate-500">Dec 18 • Registration Pending</p>
+                </div>
+                <a href="tournament-registration.html" class="px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-white font-bold text-[11px]">Enter</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coach Feedback Widget -->
+          <div class="bg-white dark:bg-[#131C2E] p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <h3 class="font-serif-title text-lg font-bold text-slate-900 dark:text-white mb-3">
+              Latest Coach Note
+            </h3>
+            <div class="flex items-start gap-3">
+              <img src="../../assets/images/coaches/coach-1.jpg" alt="GM Alexander" class="w-10 h-10 rounded-xl object-cover shrink-0">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-xs text-slate-900 dark:text-white">GM Alexander Ivanov</span>
+                  <span class="text-[10px] text-slate-400">Yesterday</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 italic mt-1 leading-relaxed">
+                  "David, your handling of the isolated queen pawn in Monday's sparring was exemplary. Watch out for time scrambles around move 35."
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Dashboard Scripts -->
+  <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Articles, Strategy Guides & News | Chess Academy</title>
+  <meta name="description" content="Read Grandmaster chess articles, opening guides, tactical combination breakdowns, and tournament preparation advice from Chess Academy faculty.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+<body data-page="blog" class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 antialiased selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Shared Header Container -->
+  <div id="site-header"></div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[45vh] lg:min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/hero/blog-hero.jpg" alt="Chess Blog & Articles" class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1220]/95 via-[#0B1220]/85 to-[#14213D]/80"></div>
+      <div class="absolute inset-0 chessboard-pattern opacity-30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D6A84F]/15 border border-[#D6A84F]/40 text-[#D6A84F] text-xs font-semibold uppercase tracking-widest mb-4">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Grandmaster Insights</span>
+      </div>
+      <h1 class="font-serif-title text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
+        Chess Strategy, Theory & <span class="gold-gradient-text">News</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+        Deep opening analysis, tactical motifs, tournament psychology, and practical training wisdom penned by active Grandmasters.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Article Banner -->
+  <section class="py-12 bg-slate-100 dark:bg-[#0E1726] border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl flex flex-col lg:flex-row group">
+        <div class="relative lg:w-1/2 h-72 lg:h-auto overflow-hidden">
+          <img src="../assets/images/blog/chess-strategy.jpg" alt="Featured Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute top-4 left-4 rtl:left-auto rtl:right-4 bg-[#D6A84F] text-slate-950 font-black text-xs px-3 py-1 rounded-full shadow">
+            Featured Masterclass
+          </div>
+        </div>
+        <div class="p-8 lg:p-12 lg:w-1/2 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mb-3">
+              <span class="text-blue-500 font-bold">Strategy & Prophylaxis</span>
+              <span>•</span>
+              <span>By GM Alexander Ivanov</span>
+              <span>•</span>
+              <span>8 Min Read</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-serif-title font-extrabold text-slate-900 dark:text-white mb-4 group-hover:text-[#D6A84F] transition-colors leading-tight">
+              The Art of Prophylaxis: Thinking Ahead Like Anatoly Karpov
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              Learn how to detect your opponent's tactical intentions two moves in advance. We analyze Karpov's famous 1974 candidate match games to illustrate how minor pawn pushes dismantle attacking threats before they are even born.
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="text-xs text-slate-400">Published Oct 28, 2026</span>
+            <a href="blog-details.html" class="px-6 py-2.5 rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] text-slate-900 font-bold text-xs transition-all shadow-md flex items-center gap-2">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-right text-xs rtl:rotate-180"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Article Cards Grid -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        
+        <!-- Post 1 -->
+        <article class="bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 overflow-hidden">
+              <img src="../assets/images/blog/chess-openings-guide.jpg" alt="Opening Repertoire Guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-0.5 rounded">
+                Opening Theory
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <span>Oct 22, 2026</span> <span class="text-slate-400 dark:text-slate-600 font-bold mx-1.5">&bull;</span> <span>6 Min Read</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Constructing a Bulletproof 1.e4 Opening Repertoire
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                Why understanding typical pawn breaks (d4, f4, c3) is tenfold more effective than memorizing 25 moves of engine lines.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="blog-details.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#D6A84F] hover:underline">
+              <span>Continue Reading</span>
+              <i class="fa-solid fa-chevron-right text-[10px] rtl:rotate-180"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 overflow-hidden">
+              <img src="../assets/images/blog/chess-tournament-tips.jpg" alt="Tournament Mental Stamina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-purple-600 text-white text-xs font-bold px-2.5 py-0.5 rounded">
+                Mental Game
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <span>Oct 15, 2026</span> <span class="text-slate-400 dark:text-slate-600 font-bold mx-1.5">&bull;</span> <span>5 Min Read</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Handling Time Scrambles: Five Golden Rules for Blitz & Classical
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                Practical clock psychology: how to stop freezing under 60 seconds and maintain hand-eye composure on the physical board.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="blog-details.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#D6A84F] hover:underline">
+              <span>Continue Reading</span>
+              <i class="fa-solid fa-chevron-right text-[10px] rtl:rotate-180"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 overflow-hidden">
+              <img src="../assets/images/blog/chess-beginner-guide.jpg" alt="Beginner Checkmate Patterns" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-emerald-600 text-white text-xs font-bold px-2.5 py-0.5 rounded">
+                Fundamentals
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <span>Oct 08, 2026</span> <span class="text-slate-400 dark:text-slate-600 font-bold mx-1.5">&bull;</span> <span>4 Min Read</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Top Seven Blunders Beginners Make in King & Pawn Endgames
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                Never lose an easily drawn king and pawn endgame again. Visual explanations of the opposition and triangulation.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="blog-details.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#D6A84F] hover:underline">
+              <span>Continue Reading</span>
+              <i class="fa-solid fa-chevron-right text-[10px] rtl:rotate-180"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Pagination / Load More -->
+      <div class="mt-14 text-center">
+        <button type="button" onclick="showToast('All available strategy articles are currently loaded.', 'info')" class="px-8 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-[#D6A84F] text-slate-800 dark:text-slate-200 font-bold text-xs uppercase tracking-wider transition-all">
+          <i class="fa-solid fa-arrows-rotate mr-2"></i> Load More Articles
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shared Footer Container -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/forms.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

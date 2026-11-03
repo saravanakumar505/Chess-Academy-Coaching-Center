@@ -1,0 +1,185 @@
+<!-- Reusable Navbar Partial (Chess Academy) -->
+<nav
+  class="sticky top-0 z-50 w-full transition-all duration-300 bg-white/95 dark:bg-[#0B1220]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm"
+  id="main-nav">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Academy Logo -->
+      <a href="../../index.html"
+        class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-[#D6A84F] rounded-lg p-1 shrink-0">
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#14213D] to-[#2563EB] dark:from-[#2563EB] dark:to-[#14213D] flex items-center justify-center text-[#D6A84F] text-xl shadow-md border border-[#D6A84F]/30 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-chess-knight"></i>
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="font-serif-title text-lg sm:text-xl font-bold tracking-wider text-slate-900 dark:text-white flex items-center gap-1">
+            CHESS <span class="text-[#D6A84F]">ACADEMY</span>
+          </span>
+          <span class="text-[9px] sm:text-[10px] tracking-widest uppercase font-semibold text-slate-500 dark:text-slate-400">Master
+            Your Mind</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links (Active on xl: 1280px+ to ensure zero cramping on any screen) -->
+      <div
+        class="hidden xl:flex items-center space-x-1 2xl:space-x-2 rtl:space-x-reverse font-medium text-xs 2xl:text-sm text-slate-700 dark:text-slate-200">
+        <!-- Home Dropdown -->
+        <div class="relative group">
+          <button type="button"
+            class="nav-item flex items-center gap-1 px-2.5 2xl:px-3 py-2 rounded-lg hover:text-[#D6A84F] hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+
+          <div
+            class="absolute left-0 rtl:left-auto rtl:right-0 mt-2 w-64 rounded-2xl bg-white dark:bg-[#131C2E] border border-slate-200 dark:border-slate-800 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
+            <a href="../../index.html"
+              class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-[#D6A84F] flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-chess-king"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-900 dark:text-white text-xs">Home 1 — Main Academy</div>
+                <div class="text-[11px] text-slate-500 dark:text-slate-400">Classic academy showcase & curriculum</div>
+              </div>
+            </a>
+            <a href="../home-2.html"
+              class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-colors mt-1">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-900 dark:text-white text-xs">Home 2 — Competitive Hub</div>
+                <div class="text-[11px] text-slate-500 dark:text-slate-400">Tournament focus & elite training layout</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="../about.html"
+          class="nav-item px-2.5 2xl:px-3 py-2 rounded-lg hover:text-[#D6A84F] hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">About</a>
+        <a href="../programs.html"
+          class="nav-item px-2.5 2xl:px-3 py-2 rounded-lg hover:text-[#D6A84F] hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Programs</a>
+        <a href="../coaches.html"
+          class="nav-item px-2.5 2xl:px-3 py-2 rounded-lg hover:text-[#D6A84F] hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Coaches</a>
+        <a href="../tournaments.html"
+          class="nav-item px-2.5 2xl:px-3 py-2 rounded-lg hover:text-[#D6A84F] hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Tournaments</a>
+        <a href="../schedule.html"
+          class="nav-item px-2.5 2xl:px-3 py-2 rounded-lg hover:text-[#D6A84F] hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Schedule</a>
+        <a href="../gallery.html"
+          class="nav-item px-2.5 2xl:px-3 py-2 rounded-lg hover:text-[#D6A84F] hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Gallery</a>
+        <a href="../blog.html"
+          class="nav-item px-2.5 2xl:px-3 py-2 rounded-lg hover:text-[#D6A84F] hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Blog</a>
+        <a href="../contact.html"
+          class="nav-item px-2.5 2xl:px-3 py-2 rounded-lg hover:text-[#D6A84F] hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Contact</a>
+      </div>
+
+      <!-- Desktop Controls -->
+      <div class="hidden xl:flex items-center space-x-2.5 rtl:space-x-reverse shrink-0">
+        <button type="button"
+          class="rtl-toggle-btn px-2.5 py-1.5 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 hover:border-[#D6A84F] text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-1.5"
+          title="Toggle RTL/LTR">
+          <i class="fa-solid fa-globe text-xs text-[#D6A84F]"></i>
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button"
+          class="theme-toggle-btn p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-[#D6A84F] text-slate-700 dark:text-slate-300 transition-colors flex items-center justify-center w-9 h-9"
+          title="Toggle Theme">
+          <i class="fa-solid fa-sun text-[#D6A84F] text-sm theme-sun-icon hidden"></i>
+          <i class="fa-solid fa-moon text-blue-400 text-sm theme-moon-icon"></i>
+        </button>
+        <a href="../login.html"
+          class="px-3 py-2 text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-[#D6A84F] transition-colors">Login</a>
+        <a href="../dashboard/index.html"
+          class="px-4 py-2 text-xs 2xl:text-sm font-semibold text-white bg-gradient-to-r from-[#14213D] via-[#2563EB] to-[#14213D] hover:from-[#1E3A8A] hover:to-[#2563EB] rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 border border-[#D6A84F]/40 flex items-center gap-2">
+          <i class="fa-solid fa-graduation-cap text-[#D6A84F]"></i>
+          <span>Dashboard</span>
+        </a>
+      </div>
+
+      <!-- Tablet & Mobile Header Controls (Visible < xl: 320px to 1279px) -->
+      <div class="flex items-center gap-1.5 sm:gap-2 xl:hidden shrink-0">
+        <button type="button"
+          class="theme-toggle-btn p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs w-8 h-8 flex items-center justify-center"
+          title="Toggle Theme">
+          <i class="fa-solid fa-sun text-[#D6A84F] text-xs theme-sun-icon hidden"></i>
+          <i class="fa-solid fa-moon text-blue-400 text-xs theme-moon-icon"></i>
+        </button>
+        <button type="button"
+          class="rtl-toggle-btn px-2 py-1 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300"
+          title="Toggle RTL/LTR">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <a href="../dashboard/index.html"
+          class="hidden sm:flex px-3 py-1.5 text-xs font-bold text-white bg-blue-600 rounded-lg items-center gap-1.5">
+          <i class="fa-solid fa-graduation-cap text-[#D6A84F]"></i>
+          <span>Dashboard</span>
+        </a>
+        <button type="button" id="mobile-menu-btn"
+          class="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-[#D6A84F]"
+          aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars text-lg" id="mobile-menu-icon"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile & Tablet Navigation Drawer -->
+  <div
+    class="xl:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/98 dark:bg-[#0B1220]/98 backdrop-blur-xl px-4 sm:px-6 pt-4 pb-8 max-h-[85vh] overflow-y-auto shadow-2xl transition-all"
+    id="mobile-menu-drawer">
+    <div class="space-y-1 text-sm font-medium">
+      <div class="border-b border-slate-100 dark:border-slate-800/80 pb-2">
+        <button type="button" id="mobile-home-toggle"
+          class="w-full flex items-center justify-between py-2.5 text-slate-800 dark:text-slate-100 font-bold">
+          <span class="flex items-center gap-2.5"><i class="fa-solid fa-chess text-[#D6A84F]"></i> Home Pages</span>
+          <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" id="mobile-home-icon"></i>
+        </button>
+        <div class="hidden pl-7 pr-2 py-2 space-y-2 rtl:pr-7 rtl:pl-2" id="mobile-home-sub">
+          <a href="../../index.html" class="block py-2 text-xs font-semibold text-slate-600 dark:text-slate-400">Home 1 —
+            Main Academy</a>
+          <a href="../home-2.html" class="block py-2 text-xs font-semibold text-slate-600 dark:text-slate-400">Home 2 —
+            Competitive Hub</a>
+        </div>
+      </div>
+      <a href="../about.html"
+        class="block py-2.5 text-slate-700 dark:text-slate-200 hover:text-[#D6A84F] border-b border-slate-100 dark:border-slate-800/60">About
+        Us</a>
+      <a href="../programs.html"
+        class="block py-2.5 text-slate-700 dark:text-slate-200 hover:text-[#D6A84F] border-b border-slate-100 dark:border-slate-800/60">Coaching
+        Programs</a>
+      <a href="../coaches.html"
+        class="block py-2.5 text-slate-700 dark:text-slate-200 hover:text-[#D6A84F] border-b border-slate-100 dark:border-slate-800/60">Our
+        Grandmasters</a>
+      <a href="../tournaments.html"
+        class="block py-2.5 text-slate-700 dark:text-slate-200 hover:text-[#D6A84F] border-b border-slate-100 dark:border-slate-800/60">Tournaments
+        & Opens</a>
+      <a href="../schedule.html"
+        class="block py-2.5 text-slate-700 dark:text-slate-200 hover:text-[#D6A84F] border-b border-slate-100 dark:border-slate-800/60">Weekly
+        Schedule</a>
+      <a href="../gallery.html"
+        class="block py-2.5 text-slate-700 dark:text-slate-200 hover:text-[#D6A84F] border-b border-slate-100 dark:border-slate-800/60">Photo
+        Gallery</a>
+      <a href="../blog.html"
+        class="block py-2.5 text-slate-700 dark:text-slate-200 hover:text-[#D6A84F] border-b border-slate-100 dark:border-slate-800/60">Chess
+        Articles & Blog</a>
+      <a href="../contact.html"
+        class="block py-2.5 text-slate-700 dark:text-slate-200 hover:text-[#D6A84F]">Contact Academy</a>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-3">
+      <a href="../login.html"
+        class="w-full text-center py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-white font-bold text-xs hover:border-[#D6A84F]">
+        Sign In to Account
+      </a>
+      <a href="../dashboard/index.html"
+        class="w-full text-center py-3 rounded-xl bg-gradient-to-r from-[#14213D] via-[#2563EB] to-[#14213D] text-white font-bold text-xs shadow-md flex items-center justify-center gap-2">
+        <i class="fa-solid fa-graduation-cap text-[#D6A84F]"></i>
+        Student Dashboard
+      </a>
+    </div>
+  </div>
+</nav>

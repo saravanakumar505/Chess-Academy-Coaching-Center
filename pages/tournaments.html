@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournaments & Opens | Chess Academy</title>
+  <meta name="description"
+    content="Official FIDE rated chess tournaments, scholastic championships, and blitz arenas hosted by Chess Academy.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+
+<body data-page="tournaments"
+  class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 antialiased selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Shared Header Container -->
+  <div id="site-header"></div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[45vh] lg:min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/hero/tournaments-hero.jpg" alt="Chess Tournaments Arena"
+        class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1220]/95 via-[#0B1220]/85 to-[#14213D]/80"></div>
+      <div class="absolute inset-0 chessboard-pattern opacity-30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D6A84F]/15 border border-[#D6A84F]/40 text-[#D6A84F] text-xs font-semibold uppercase tracking-widest mb-4">
+        <i class="fa-solid fa-trophy"></i>
+        <span>Official Competition Hub</span>
+      </div>
+      <h1 class="font-serif-title text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
+        Chess Tournaments & <span class="gold-gradient-text">Championships</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+        Test your preparation in official FIDE-rated Classical, Rapid, and Blitz tournaments with verified arbiters and
+        live broadcast DGT boards.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter Navigation Bar -->
+  <section class="py-6 bg-slate-100 dark:bg-[#0E1726] border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+        <button type="button"
+          class="tournament-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#D6A84F] text-slate-900 shadow-md transition-all"
+          data-status="all">
+          All Tournaments
+        </button>
+        <button type="button"
+          class="tournament-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all"
+          data-status="upcoming">
+          Upcoming Events
+        </button>
+        <button type="button"
+          class="tournament-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all"
+          data-status="ongoing">
+          Ongoing Live Tournaments
+        </button>
+        <button type="button"
+          class="tournament-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all"
+          data-status="completed">
+          Completed & Archives
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tournaments List -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8" id="tournaments-container">
+
+      <!-- Tournament 1: Upcoming Classical Open -->
+      <div
+        class="tournament-card bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all flex flex-col lg:flex-row group"
+        data-status="upcoming">
+        <div class="relative lg:w-80 xl:w-96 h-64 lg:h-auto overflow-hidden shrink-0">
+          <img src="../assets/images/tournaments/tournament-main.jpg" alt="Autumn Grandmaster Open"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div
+            class="absolute top-4 left-4 rtl:left-auto rtl:right-4 bg-[#D6A84F] text-slate-950 font-black text-xs px-3 py-1 rounded-full shadow">
+            FIDE Rated Classical
+          </div>
+        </div>
+        <div class="p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mb-3">
+              <span class="text-blue-500 font-bold"><i class="fa-solid fa-calendar mr-1"></i> Nov 28 - 30, 2026</span>
+              <span class="text-slate-400 dark:text-slate-600 font-bold mx-1.5">&bull;</span>
+              <span><i class="fa-solid fa-clock mr-1"></i> Reg Deadline: Nov 24</span>
+              <span class="text-slate-400 dark:text-slate-600 font-bold mx-1.5">&bull;</span>
+              <span><i class="fa-solid fa-location-dot mr-1"></i> Grand Championship Arena (In-Person)</span>
+            </div>
+            <h3
+              class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+              Autumn Grandmaster Classical Open (5-Round Swiss)
+            </h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+              Official FIDE rated tournament. Time control: 90 minutes + 30 seconds increment. Open to players rated
+              1400 to 2400+. Guaranteed prize pool with GM title norm certificates awarded.
+            </p>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-4 text-xs py-4 px-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 mb-6">
+              <div>
+                <span class="text-slate-400 block">Prize Fund:</span>
+                <strong class="text-emerald-500 font-bold">$15,000 USD</strong>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Entry Fee:</span>
+                <strong class="text-slate-900 dark:text-white">$65 USD</strong>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Eligibility:</span>
+                <strong class="text-slate-900 dark:text-white">FIDE ID Required</strong>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Format:</span>
+                <strong class="text-slate-900 dark:text-white">5 Rounds Swiss</strong>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="text-xs font-semibold text-emerald-500"><i class="fa-solid fa-circle-check mr-1"></i>
+              Registration Open (48/80 Seats Filled)</span>
+            <div class="flex items-center gap-3">
+              <a href="tournament-details.html"
+                class="px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-white font-bold text-xs hover:bg-[#D6A84F] hover:text-slate-950 transition-all">
+                Full Details
+              </a>
+              <a href="tournament-details.html#register"
+                class="register-tournament-btn px-6 py-2.5 rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] text-slate-900 font-bold text-xs sm:text-sm shadow-md transition-all inline-flex items-center justify-center"
+                data-title="Autumn Grandmaster Classical Open">
+                Register Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tournament 2: Ongoing Youth Championship -->
+      <div
+        class="tournament-card bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all flex flex-col lg:flex-row group"
+        data-status="ongoing">
+        <div class="relative lg:w-80 xl:w-96 h-64 lg:h-auto overflow-hidden shrink-0">
+          <img src="../assets/images/tournaments/tournament-students.jpg" alt="Scholastic Winter Grand Prix"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div
+            class="absolute top-4 left-4 rtl:left-auto rtl:right-4 bg-emerald-500 text-white font-black text-xs px-3 py-1 rounded-full shadow flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span> Live Now
+          </div>
+        </div>
+        <div class="p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mb-3">
+              <span class="text-emerald-500 font-bold"><i class="fa-solid fa-circle-play mr-1"></i> Today - In
+                Progress</span>
+              <span class="text-slate-400 dark:text-slate-600 font-bold mx-1.5">&bull;</span>
+              <span><i class="fa-solid fa-globe mr-1"></i> Online Live Arena</span>
+              <span class="text-slate-400 dark:text-slate-600 font-bold mx-1.5">&bull;</span>
+              <span><i class="fa-solid fa-users mr-1"></i> 112 Active Junior Players</span>
+            </div>
+            <h3
+              class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+              Scholastic Winter Grand Prix U-16 (Round 3 in Progress)
+            </h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+              Our premier scholastic circuit event. Watch live games with Grandmaster commentary on board 1 and 2, with
+              real-time Stockfish 16 evaluations.
+            </p>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-4 text-xs py-4 px-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 mb-6">
+              <div>
+                <span class="text-slate-400 block">Current Leader:</span>
+                <strong class="text-white">Maya Turner (3.0/3)</strong>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Time Control:</span>
+                <strong class="text-slate-900 dark:text-white">15m + 10s Rapid</strong>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Category:</span>
+                <strong class="text-slate-900 dark:text-white">Under-16 Open</strong>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Arbiters:</span>
+                <strong class="text-slate-900 dark:text-white">FIDE IA Certified</strong>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="text-xs font-semibold text-blue-500"><i class="fa-solid fa-eye mr-1"></i> Live Stream
+              Available</span>
+            <a href="tournament-details.html"
+              class="px-6 py-2.5 rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] text-slate-900 font-bold text-xs sm:text-sm shadow-md transition-all inline-flex items-center justify-center">
+              Watch Live Games & Standings
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tournament 3: Completed Championship Archive -->
+      <div
+        class="tournament-card bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all flex flex-col lg:flex-row group"
+        data-status="completed">
+        <div class="relative lg:w-80 xl:w-96 h-64 lg:h-auto overflow-hidden shrink-0">
+          <img src="../assets/images/tournaments/chess-awards.jpg " alt=Summer Masters Invitationa
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div
+            class="absolute top-4 left-4 rtl:left-auto rtl:right-4 bg-slate-700 text-slate-200 font-bold text-xs px-3 py-1 rounded-full shadow">
+            Completed Archive
+          </div>
+        </div>
+        <div class="p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mb-3">
+              <span><i class="fa-solid fa-calendar-check mr-1"></i> Concluded Oct 14, 2026</span>
+              <span class="text-slate-400 dark:text-slate-600 font-bold mx-1.5">&bull;</span>
+              <span><i class="fa-solid fa-award mr-1"></i> Winner: GM Alexander Ivanov</span>
+            </div>
+            <h3
+              class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+              Summer Masters Invitational Blitz Cup
+            </h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+              A gripping 11-round blitz battle featuring 4 Grandmasters and 8 International Masters. All 88 games
+              available for PGN download and tactical analysis.
+            </p>
+          </div>
+          <div
+            class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="text-xs text-slate-500">Official Results Submitted to FIDE</span>
+            <a href="tournament-details.html"
+              class="px-6 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-white font-bold text-xs hover:bg-[#D6A84F] hover:text-slate-950 transition-all">
+              View Final Standings & PGNs
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shared Footer Container -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/tournaments.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

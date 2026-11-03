@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art of Prophylaxis: Thinking Like Anatoly Karpov | Chess Academy</title>
+  <meta name="description" content="A masterclass on prophylactic chess thinking, understanding opponent candidate moves, and neutralizing attacking counterplay before it begins.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+<body data-page="blog" class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 antialiased selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Shared Header Container -->
+  <div id="site-header"></div>
+
+  <!-- Hero Article Header -->
+  <section class="relative min-h-[48vh] lg:min-h-[52vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/blog/chess-strategy.jpg" alt="Art of Prophylaxis" class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1220]/95 via-[#0B1220]/85 to-[#14213D]/80"></div>
+      <div class="absolute inset-0 chessboard-pattern opacity-30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/30 text-blue-400 border border-blue-500/30 text-xs font-bold uppercase tracking-wider mb-4">
+        <span>Middlegame Strategy</span>
+      </div>
+      <h1 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight text-white">
+        The Art of Prophylaxis: Thinking Ahead Like Anatoly Karpov
+      </h1>
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-slate-300">
+        <div class="flex items-center gap-2">
+          <img src="../assets/images/coaches/coach-1.jpg" alt="GM Alexander Ivanov" class="w-7 h-7 rounded-full object-cover">
+          <span>By GM Alexander Ivanov</span>
+        </div>
+        <span>•</span>
+        <span>October 28, 2026</span>
+        <span>•</span>
+        <span>8 Min Read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body & Sidebar -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Article Content -->
+      <article class="prose prose-slate dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 text-base leading-relaxed space-y-6">
+        
+        <p class="text-lg font-medium text-slate-900 dark:text-white leading-relaxed">
+          The 12th World Champion Anatoly Karpov was once asked what his core strategic principle was when sitting across the board from aggressive grandmasters like Garry Kasparov or Viktor Korchnoi. His answer was deceptively simple: <em class="text-[#D6A84F]">"I look at my opponent’s position and ask myself: what does he want to do? Then I stop him from doing it."</em>
+        </p>
+
+        <h2 class="text-2xl font-serif-title font-bold text-slate-900 dark:text-white pt-4">
+          1. Understanding the Difference Between Passive Defense and Prophylaxis
+        </h2>
+
+        <p>
+          Amateur chess players frequently confuse defensive play with passivity. Passive play yields territory and allows the opponent to place their pieces on ideal attacking outposts without consequence. Prophylaxis, by contrast, is an <strong>active preventive strike</strong>. It denies the opponent their natural freeing moves (such as ...c5 in the French Defense or ...d5 in the Caro-Kann) before they can execute them.
+        </p>
+
+        <!-- Inline Visual Card -->
+        <div class="my-8 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
+          <img src="../assets/images/programs/chess-openings.jpg" alt="Pawn structure analysis" class="w-full h-80 object-cover">
+          <div class="p-4 bg-slate-50 dark:bg-[#131C2E] text-xs text-slate-500 italic text-center">
+            Figure 1.1: Preventing black's tactical bishop pin by playing h2-h3 in advance, securing the knight on f3.
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-serif-title font-bold text-slate-900 dark:text-white pt-4">
+          2. The Three-Question Calculation Filter
+        </h2>
+
+        <p>
+          Before touching any piece during your tournament rounds, train your subconscious to execute this three-step checklist:
+        </p>
+
+        <div class="p-6 rounded-2xl bg-slate-100 dark:bg-[#131C2E] border-l-4 border-[#D6A84F] rtl:border-l-0 rtl:border-r-4 not-italic my-6 space-y-2">
+          <p class="font-bold text-slate-900 dark:text-white text-sm">Step 1: What is my opponent's primary threat on the next move?</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400">Is there a piece hanging, a fork threatened, or a file about to be infiltrated?</p>
+          <p class="font-bold text-slate-900 dark:text-white text-sm pt-2">Step 2: What is their intended strategic plan over the next 3 moves?</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400">Are they preparing to reroute their knight to an outpost square or launch a kingside pawn storm?</p>
+          <p class="font-bold text-slate-900 dark:text-white text-sm pt-2">Step 3: Can I combine prophylaxis with my own positional advance?</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400">The hallmark of a master move is a move that stops enemy counterplay while simultaneously setting up your own offensive breakout.</p>
+        </div>
+
+        <h2 class="text-2xl font-serif-title font-bold text-slate-900 dark:text-white pt-4">
+          3. Conclusion: Cultivating Patience on the 64 Squares
+        </h2>
+
+        <p>
+          Rushing forward prematurely with attacks before securing your own king's sanctuary is the leading cause of sudden blunders in club chess. Integrate prophylactic habits into your weekly puzzle training and watch your opponent's attacking options dissolve into frustration.
+        </p>
+
+      </article>
+
+      <!-- Author Card & Social Share -->
+      <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-4">
+          <img src="../assets/images/coaches/coach-1.jpg" alt="GM Alexander Ivanov" class="w-14 h-14 rounded-2xl object-cover shadow">
+          <div>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Written by GM Alexander Ivanov</h4>
+            <p class="text-xs text-slate-500">Head Coach & FIDE Senior Trainer at Chess Academy</p>
+          </div>
+        </div>
+
+        <!-- Social Share Buttons -->
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-semibold text-slate-500 mr-2">Share:</span>
+          <button type="button" onclick="navigator.clipboard.writeText(window.location.href); showToast('Article URL copied to clipboard!', 'info')" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-[#D6A84F] flex items-center justify-center text-xs" title="Copy Link">
+            <i class="fa-solid fa-link"></i>
+          </button>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-[#2563EB] flex items-center justify-center text-xs" title="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 flex items-center justify-center text-xs" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Related Articles Carousel / Links -->
+      <div class="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800">
+        <h3 class="font-serif-title text-xl font-bold text-slate-900 dark:text-white mb-6">
+          Related Chess Strategy Articles
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <a href="blog.html" class="p-5 rounded-2xl bg-white dark:bg-[#131C2E] border border-slate-200 dark:border-slate-800 hover:border-[#D6A84F] transition-all group block">
+            <span class="text-[10px] font-bold text-blue-500 uppercase">Opening Guide</span>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-1 group-hover:text-[#D6A84F] transition-colors">
+              Constructing a Bulletproof 1.e4 Opening Repertoire
+            </h4>
+          </a>
+          <a href="blog.html" class="p-5 rounded-2xl bg-white dark:bg-[#131C2E] border border-slate-200 dark:border-slate-800 hover:border-[#D6A84F] transition-all group block">
+            <span class="text-[10px] font-bold text-purple-500 uppercase">Clock Psychology</span>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-1 group-hover:text-[#D6A84F] transition-colors">
+              Handling Time Scrambles: Five Golden Rules for Blitz & Classical
+            </h4>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shared Footer Container -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/forms.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery & Academy Moments | Chess Academy</title>
+  <meta name="description" content="Explore photos of Chess Academy training halls, tournament battles, award ceremonies, grandmaster simuls, and scholastic champions.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+<body data-page="gallery" class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 antialiased selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Shared Header Container -->
+  <div id="site-header"></div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[45vh] lg:min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/hero/gallery-hero.jpg" alt="Chess Academy Gallery" class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1220]/95 via-[#0B1220]/85 to-[#14213D]/80"></div>
+      <div class="absolute inset-0 chessboard-pattern opacity-30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D6A84F]/15 border border-[#D6A84F]/40 text-[#D6A84F] text-xs font-semibold uppercase tracking-widest mb-4">
+        <i class="fa-solid fa-camera-retro"></i>
+        <span>Visual Archive</span>
+      </div>
+      <h1 class="font-serif-title text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
+        Academy Life in <span class="gold-gradient-text">Pictures</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+        A glimpse into the intense concentration, grandmaster masterclasses, award podiums, and camaraderie that define Chess Academy.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Filter Tabs -->
+  <section class="py-6 bg-slate-100 dark:bg-[#0E1726] border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-center gap-2" id="gallery-filter-tabs">
+        <button type="button" class="gallery-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#D6A84F] text-slate-900 shadow-md" data-category="all">
+          All Photographs
+        </button>
+        <button type="button" class="gallery-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:text-[#D6A84F]" data-category="training">
+          Training Sessions
+        </button>
+        <button type="button" class="gallery-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:text-[#D6A84F]" data-category="tournaments">
+          Tournaments & Arenas
+        </button>
+        <button type="button" class="gallery-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:text-[#D6A84F]" data-category="awards">
+          Awards & Celebrations
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-container">
+        
+        <!-- Image 1: Training -->
+        <div class="gallery-card group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-72 border border-slate-200 dark:border-slate-800" data-category="training">
+          <a href="#" class="gallery-item block w-full h-full" data-caption="Grandmaster Alexander analyzing student pawn structures on digital demonstration board.">
+            <img src="../assets/images/gallery/gallery-2.jpg" alt="Coach Teaching on Demo Board" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+              <span class="text-xs uppercase font-bold text-[#D6A84F]">Training Session</span>
+              <h3 class="text-base font-bold">Demo Board Strategic Masterclass</h3>
+            </div>
+          </a>
+        </div>
+
+        <!-- Image 2: Tournament Arena -->
+        <div class="gallery-card group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-72 border border-slate-200 dark:border-slate-800" data-category="tournaments">
+          <a href="#" class="gallery-item block w-full h-full" data-caption="High-stakes classical round at the Metropolitan Open Championship.">
+            <img src="../assets/images/gallery/gallery-1.jpg" alt="Championship Match in Arena" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+              <span class="text-xs uppercase font-bold text-blue-400">Tournaments</span>
+              <h3 class="text-base font-bold">Clock Pressure in Round 4</h3>
+            </div>
+          </a>
+        </div>
+
+        <!-- Image 3: Awards Ceremony -->
+        <div class="gallery-card group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-72 border border-slate-200 dark:border-slate-800" data-category="awards">
+          <a href="#" class="gallery-item block w-full h-full" data-caption="Junior Champions holding gold and silver cups at the annual Academy Gala.">
+            <img src="../assets/images/tournaments/chess-awards.jpg" alt="Trophy Presentation Ceremony" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+              <span class="text-xs uppercase font-bold text-[#D6A84F]">Awards & Honours</span>
+              <h3 class="text-base font-bold">Annual Grand Prix Champions</h3>
+            </div>
+          </a>
+        </div>
+
+        <!-- Image 4: Deep Practice -->
+        <div class="gallery-card group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-72 border border-slate-200 dark:border-slate-800" data-category="training">
+          <a href="#" class="gallery-item block w-full h-full" data-caption="Student deep in calculation working on complex rook endgame tactics.">
+            <img src="../assets/images/gallery/gallery-3.jpg" alt="Student in Deep Concentration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+              <span class="text-xs uppercase font-bold text-[#D6A84F]">Focus & Mind</span>
+              <h3 class="text-base font-bold">Tactical Puzzle Immersion</h3>
+            </div>
+          </a>
+        </div>
+
+        <!-- Image 5: Scholastic Event -->
+        <div class="gallery-card group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-72 border border-slate-200 dark:border-slate-800" data-category="tournaments">
+          <a href="#" class="gallery-item block w-full h-full" data-caption="Youth inter-academy team tournament with digital pairing boards.">
+            <img src="../assets/images/tournaments/tournament-students.jpg" alt="Scholastic Tournament Hall" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+              <span class="text-xs uppercase font-bold text-blue-400">Tournaments</span>
+              <h3 class="text-base font-bold">Scholastic League Championships</h3>
+            </div>
+          </a>
+        </div>
+
+        <!-- Image 6: Simultaneous Exhibition -->
+        <div class="gallery-card group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-72 border border-slate-200 dark:border-slate-800" data-category="training">
+          <a href="#" class="gallery-item block w-full h-full" data-caption="Grandmaster simultaneous exhibition playing 25 academy students at once.">
+            <img src="../assets/images/gallery/gallery-5.jpg" alt="Simultaneous Chess Exhibition" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+              <span class="text-xs uppercase font-bold text-[#D6A84F]">Special Events</span>
+              <h3 class="text-base font-bold">25-Board Grandmaster Simul</h3>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Modal Overlay -->
+  <div class="lightbox-overlay" id="gallery-lightbox">
+    <div class="lightbox-backdrop absolute inset-0"></div>
+    <div class="relative z-10 max-w-4xl max-h-[90vh] p-4 flex flex-col items-center">
+      <button type="button" id="lightbox-close" class="absolute -top-12 right-0 text-white hover:text-[#D6A84F] text-2xl p-2 focus:outline-none">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img src="" id="lightbox-image" alt="Enlarged Chess View" class="max-h-[75vh] w-auto rounded-2xl shadow-2xl object-contain border border-white/20">
+      <p id="lightbox-caption" class="text-slate-300 text-sm mt-4 text-center max-w-xl"></p>
+    </div>
+  </div>
+
+  <!-- Shared Footer Container -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script>
+    // Gallery Category Filtering Script
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabBtns = document.querySelectorAll('.gallery-tab-btn');
+      const cards = document.querySelectorAll('.gallery-card');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.dataset.category;
+
+          tabBtns.forEach(b => {
+            if (b === btn) {
+              b.className = 'gallery-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#D6A84F] text-slate-900 shadow-md transition-all';
+            } else {
+              b.className = 'gallery-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:text-[#D6A84F] transition-all';
+            }
+          });
+
+          cards.forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

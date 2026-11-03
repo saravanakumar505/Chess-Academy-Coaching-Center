@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening Soon | Chess Academy</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+<body data-page="coming-soon" class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 min-h-screen flex flex-col justify-between selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Shared Header Container -->
+  <div id="site-header"></div>
+
+  <!-- Coming Soon Main Section -->
+  <main class="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div class="max-w-xl mx-auto text-center py-12">
+      
+      <div class="w-20 h-20 rounded-3xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-4xl mx-auto mb-6 pulse-badge">
+        <i class="fa-solid fa-chess-knight"></i>
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D6A84F]/15 text-[#D6A84F] text-xs font-bold uppercase tracking-wider mb-4">
+        <span>In Development</span>
+      </div>
+
+      <h1 class="font-serif-title text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+        Exciting New Feature <span class="gold-gradient-text">Arriving Soon</span>
+      </h1>
+      <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed mb-8 max-w-md mx-auto">
+        Our Grandmasters and engineers are finalizing this section. Check back soon or leave your email to receive early access notification.
+      </p>
+
+      <form onsubmit="event.preventDefault(); showToast('Thank you! You will receive notification when this launches.', 'success'); this.reset();" class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto mb-8">
+        <input type="email" required placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-xl text-xs sm:text-sm bg-white dark:bg-[#131C2E] border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-[#D6A84F]">
+        <button type="submit" class="px-6 py-3 rounded-xl bg-[#D6A84F] hover:bg-[#B88B32] text-slate-950 font-bold text-xs uppercase tracking-wider transition-colors shadow">
+          Notify Me
+        </button>
+      </form>
+
+      <div>
+        <a href="../index.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#2563EB] dark:text-blue-400 hover:text-[#D6A84F]">
+          <i class="fa-solid fa-arrow-left rtl:rotate-180"></i>
+          <span>Back to Academy Home</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Shared Footer Container -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/forms.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

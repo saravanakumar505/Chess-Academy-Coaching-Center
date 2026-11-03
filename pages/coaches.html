@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Grandmasters & Coaches | Chess Academy</title>
+  <meta name="description" content="Meet our world-class chess coaching faculty including active FIDE Grandmasters, International Masters, and FIDE Senior Trainers.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+<body data-page="coaches" class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 antialiased selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Shared Header Container -->
+  <div id="site-header"></div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[45vh] lg:min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/hero/coaches-hero.jpg" alt="Chess Coaches Banner" class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1220]/95 via-[#0B1220]/85 to-[#14213D]/80"></div>
+      <div class="absolute inset-0 chessboard-pattern opacity-30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D6A84F]/15 border border-[#D6A84F]/40 text-[#D6A84F] text-xs font-semibold uppercase tracking-widest mb-4">
+        <i class="fa-solid fa-chess-knight"></i>
+        <span>FIDE Certified Faculty</span>
+      </div>
+      <h1 class="font-serif-title text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
+        Meet Our <span class="gold-gradient-text">Grandmaster Coaches</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+        Learn directly from international titleholders with decades of competitive championship play and proven coaching methodologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Coaches Roster Grid -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+        
+        <!-- Coach 1 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-72 overflow-hidden">
+              <img src="../assets/images/coaches/coach-1.jpg" alt="GM Alexander Ivanov" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-4 left-4 rtl:left-auto rtl:right-4 bg-[#D6A84F] text-slate-950 font-black text-xs px-3 py-1 rounded-full shadow">
+                FIDE Grandmaster
+              </div>
+              <div class="absolute bottom-4 right-4 rtl:right-auto rtl:left-4 bg-slate-950/80 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded">
+                <i class="fa-solid fa-trophy text-[#D6A84F] mr-1"></i> Peak Elo: 2640
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Alexander Ivanov</h3>
+              <p class="text-xs text-blue-600 dark:text-blue-400 font-bold mb-3">Head of Academy & Master Coach</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-4">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-briefcase text-[#D6A84F]"></i>
+                  <span>18+ Years Coaching Experience</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-bullseye text-[#D6A84F]"></i>
+                  <span>Spec: Deep Calculation & Openings</span>
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                Former European Championship medalist who has coached dozens of young prodigies to International Master and Grandmaster norms.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="coach-details.html" class="block w-full py-2.5 text-center rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] font-bold text-xs text-slate-950 shadow-md transition-all uppercase tracking-wider">
+              View Profile & Batches
+            </a>
+          </div>
+        </div>
+
+        <!-- Coach 2 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-72 overflow-hidden">
+              <img src="../assets/images/coaches/coach-2.jpg" alt="WGM Elena Rostova" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-4 left-4 rtl:left-auto rtl:right-4 bg-[#D6A84F] text-slate-950 font-black text-xs px-3 py-1 rounded-full shadow">
+                Woman Grandmaster
+              </div>
+              <div class="absolute bottom-4 right-4 rtl:right-auto rtl:left-4 bg-slate-950/80 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded">
+                <i class="fa-solid fa-trophy text-[#D6A84F] mr-1"></i> Peak Elo: 2480
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Elena Rostova</h3>
+              <p class="text-xs text-blue-600 dark:text-blue-400 font-bold mb-3">Tactics & Dynamic Attacks Director</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-4">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-briefcase text-[#D6A84F]"></i>
+                  <span>14+ Years Coaching Experience</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-bullseye text-[#D6A84F]"></i>
+                  <span>Spec: Combinations & Rapid Play</span>
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                FIDE Senior Trainer renowned for dynamic attacking chess and preparing girls and women for international Olympiads.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="coach-details.html" class="block w-full py-2.5 text-center rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] font-bold text-xs text-slate-950 shadow-md transition-all uppercase tracking-wider">
+              View Profile & Batches
+            </a>
+          </div>
+        </div>
+
+        <!-- Coach 3 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-72 overflow-hidden">
+              <img src="../assets/images/coaches/coach-3.jpg" alt="IM Marcus Vance" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-4 left-4 rtl:left-auto rtl:right-4 bg-[#D6A84F] text-slate-950 font-black text-xs px-3 py-1 rounded-full shadow">
+                International Master
+              </div>
+              <div class="absolute bottom-4 right-4 rtl:right-auto rtl:left-4 bg-slate-950/80 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded">
+                <i class="fa-solid fa-trophy text-[#D6A84F] mr-1"></i> Peak Elo: 2415
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Marcus Vance</h3>
+              <p class="text-xs text-blue-600 dark:text-blue-400 font-bold mb-3">Endgame & Positional Strategist</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-4">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-briefcase text-[#D6A84F]"></i>
+                  <span>12+ Years Coaching Experience</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-bullseye text-[#D6A84F]"></i>
+                  <span>Spec: Endgame Conversions</span>
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                Specializes in converting tiny positional advantages into full points with pinpoint technical endgame precision.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="coach-details.html" class="block w-full py-2.5 text-center rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] font-bold text-xs text-slate-950 shadow-md transition-all uppercase tracking-wider">
+              View Profile & Batches
+            </a>
+          </div>
+        </div>
+
+        <!-- Coach 4 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-72 overflow-hidden">
+              <img src="../assets/images/coaches/coach-4.jpg" alt="FM Sarah Jenkins" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-4 left-4 rtl:left-auto rtl:right-4 bg-[#D6A84F] text-slate-950 font-black text-xs px-3 py-1 rounded-full shadow">
+                FIDE Master
+              </div>
+              <div class="absolute bottom-4 right-4 rtl:right-auto rtl:left-4 bg-slate-950/80 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded">
+                <i class="fa-solid fa-trophy text-[#D6A84F] mr-1"></i> Peak Elo: 2320
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Sarah Jenkins</h3>
+              <p class="text-xs text-blue-600 dark:text-blue-400 font-bold mb-3">Youth Scholastic Program Lead</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-4">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-briefcase text-[#D6A84F]"></i>
+                  <span>10+ Years Coaching Experience</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-bullseye text-[#D6A84F]"></i>
+                  <span>Spec: Scholastic & Youth Foundations</span>
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                Beloved for making chess intuitive, fun, and deeply engaging for young minds aged 6 to 14.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="coach-details.html" class="block w-full py-2.5 text-center rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] font-bold text-xs text-slate-950 shadow-md transition-all uppercase tracking-wider">
+              View Profile & Batches
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- NEW SECTION 1: COACHING METHODOLOGY PILLARS-->
+  <!-- ========================================== -->
+  <section class="py-20 lg:py-28 bg-slate-50 dark:bg-[#0E1726]/60 border-t border-slate-200 dark:border-slate-800 relative overflow-hidden">
+    <div class="absolute inset-0 chess-board-pattern opacity-5 dark:opacity-10 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D6A84F]/10 border border-[#D6A84F]/20 text-[#D6A84F] text-xs font-bold uppercase tracking-widest mb-4">
+          <i class="fa-solid fa-chess-knight"></i> Faculty Methodology
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white font-serif tracking-tight mb-4">
+          The 4 Pillars of Grandmaster Mentorship
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
+          Our coaches do not just demonstrate moves — they instill the disciplined mental reflexes, psychological stamina, and precise calculation used at the Olympiad level.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pillar 1 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-2xl p-7 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-[#D6A84F]/10 text-[#D6A84F] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            Dynamic Game Post-Mortems
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Every tournament loss is dissected move-by-move to reveal root miscalculations, candidate move misses, and psychological hesitations.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-2xl p-7 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            Custom Repertoire Files
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Students receive curated PGN opening databases tailored specifically to their stylistic tendencies, whether sharp tactical gambits or solid positional grinds.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-2xl p-7 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            Visualization & Calculation
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Rigorous blindfold visualization exercises and structured candidate-move tree pruning to calculate 5+ moves deep without moving the pieces.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-2xl p-7 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-stopwatch"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            Tournament Psychology
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Clock crisis management, adrenaline regulation in time scrambles, and fear-free play against titled or significantly higher-rated competitors.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Coach Stats Strip -->
+      <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white border border-slate-700/60 shadow-xl grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-3xl sm:text-4xl font-black text-[#D6A84F] font-serif mb-1">18+</div>
+          <div class="text-xs sm:text-sm text-slate-300 font-medium">Titled Masters Produced</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-black text-[#D6A84F] font-serif mb-1">5,200+</div>
+          <div class="text-xs sm:text-sm text-slate-300 font-medium">Tournament Games Analyzed</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-black text-[#D6A84F] font-serif mb-1">60+ Yrs</div>
+          <div class="text-xs sm:text-sm text-slate-300 font-medium">Combined Olympiad Experience</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-black text-[#D6A84F] font-serif mb-1">100%</div>
+          <div class="text-xs sm:text-sm text-slate-300 font-medium">FIDE Certified Faculty</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- NEW SECTION 2: 1-ON-1 MENTORSHIP FAQ & CTA -->
+  <!-- ========================================== -->
+  <section class="py-20 lg:py-28 bg-white dark:bg-[#0B1220]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Left: FAQ (7 cols) -->
+        <div class="lg:col-span-7">
+          <div class="mb-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 text-xs font-bold uppercase tracking-widest mb-4">
+              <i class="fa-solid fa-circle-question"></i> Mentorship Inquiries
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white font-serif tracking-tight mb-4">
+              Private Coaching & Mentorship FAQs
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+              Common questions on booking 1-on-1 sparring sessions, game evaluations, and personalized training timetables.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            
+            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#131C2E]/60 transition-colors">
+              <details class="group" open>
+                <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 dark:text-white text-base select-none">
+                  <span class="flex items-center gap-3">
+                    <i class="fa-solid fa-chess-king text-[#D6A84F]"></i>
+                    Can I book a 1-on-1 session directly with GM Alexander Ivanov?
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-sm text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="px-5 sm:px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-200/60 dark:border-slate-800/60 pt-4">
+                  Yes, Head Coach Alexander Ivanov takes on select students rated 1400+ for private opening preparation and tournament diagnostic work. Sessions are scheduled through the coaching office based on availability.
+                </div>
+              </details>
+            </div>
+
+            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#131C2E]/60 transition-colors">
+              <details class="group">
+                <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 dark:text-white text-base select-none">
+                  <span class="flex items-center gap-3">
+                    <i class="fa-solid fa-video text-[#D6A84F]"></i>
+                    Are private lessons conducted online or in person?
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-sm text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="px-5 sm:px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-200/60 dark:border-slate-800/60 pt-4">
+                  Both! You can book in-person private sessions at our Manhattan chess center or join high-definition live interactive sessions with shared analysis boards, voice call, and annotated PGN downloads.
+                </div>
+              </details>
+            </div>
+
+            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#131C2E]/60 transition-colors">
+              <details class="group">
+                <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 dark:text-white text-base select-none">
+                  <span class="flex items-center gap-3">
+                    <i class="fa-solid fa-clock-rotate-left text-[#D6A84F]"></i>
+                    What happens if I need to reschedule a booked private lesson?
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-sm text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="px-5 sm:px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-200/60 dark:border-slate-800/60 pt-4">
+                  We require 24 hours advance notice for rescheduling. Any session rescheduled before this window is credited back to your student account with no penalty.
+                </div>
+              </details>
+            </div>
+
+            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#131C2E]/60 transition-colors">
+              <details class="group">
+                <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 dark:text-white text-base select-none">
+                  <span class="flex items-center gap-3">
+                    <i class="fa-solid fa-file-lines text-[#D6A84F]"></i>
+                    Do coaches provide written reports and homework after each lesson?
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-sm text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="px-5 sm:px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-200/60 dark:border-slate-800/60 pt-4">
+                  Yes, following every 1-on-1 session, your coach uploads an annotated PGN file containing the variations analyzed, engine evaluations, and a 15-puzzle homework set directly to your Student Dashboard.
+                </div>
+              </details>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Booking Consultation Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="sticky top-28 bg-gradient-to-b from-[#131C2E] to-[#0B1220] text-white rounded-3xl p-8 sm:p-10 border-2 border-[#D6A84F]/40 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-60 h-60 bg-[#D6A84F]/15 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="relative z-10">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D6A84F]/20 text-[#D6A84F] text-xs font-bold uppercase tracking-wider mb-6">
+                <i class="fa-solid fa-trophy"></i> Elite 1-on-1 Sparring
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl font-black font-serif text-white mb-3">
+                Book a Grandmaster Sparring Session
+              </h3>
+
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Experience the game through the mind of a titled grandmaster. Play clocked practice games with live move commentary and deep post-mortem analysis.
+              </p>
+
+              <div class="space-y-3.5 mb-8">
+                <div class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-[#D6A84F]/20 text-[#D6A84F] flex items-center justify-center text-xs mt-0.5 shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="text-xs sm:text-sm text-slate-200">60 or 90-minute private masterclass</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-[#D6A84F]/20 text-[#D6A84F] flex items-center justify-center text-xs mt-0.5 shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="text-xs sm:text-sm text-slate-200">Full PGN file with coach annotations</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-[#D6A84F]/20 text-[#D6A84F] flex items-center justify-center text-xs mt-0.5 shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="text-xs sm:text-sm text-slate-200">Targeted tactical homework puzzle set</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-[#D6A84F]/20 text-[#D6A84F] flex items-center justify-center text-xs mt-0.5 shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="text-xs sm:text-sm text-slate-200">Flexible morning, evening & weekend slots</span>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <a href="contact.html?subject=Private+Coaching+Session" class="block w-full text-center py-3.5 px-6 rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] text-slate-900 font-bold text-sm shadow-lg transition-transform hover:-translate-y-0.5">
+                  Inquire for Private Booking <i class="fa-solid fa-calendar-check ml-1.5"></i>
+                </a>
+                <a href="schedule.html" class="block w-full text-center py-3 px-6 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs transition-colors">
+                  Explore Weekly Group Batches
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer Container -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

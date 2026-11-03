@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching Programs | Chess Academy & Coaching Center</title>
+  <meta name="description"
+    content="Structured chess coaching programs across Beginner, Intermediate, and Advanced levels. FIDE certified training, tactics, openings, and endgame mastery.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#14213D',
+            'primary-dark': '#0B1220',
+            accent: '#D6A84F',
+            'accent-hover': '#B88B32',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons CDN -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo/favicon-32x32.png">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Immediate Theme & RTL Init -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+
+<body data-page="programs"
+  class="bg-[#F8FAFC] dark:bg-[#0B1220] text-[#172033] dark:text-[#E2E8F0] transition-colors duration-300 antialiased selection:bg-[#D6A84F] selection:text-slate-900">
+
+  <!-- Shared Header Container -->
+  <div id="site-header"></div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[45vh] lg:min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/hero/programs-hero.jpg" alt="Chess Programs Banner"
+        class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1220]/95 via-[#0B1220]/85 to-[#14213D]/80"></div>
+      <div class="absolute inset-0 chessboard-pattern opacity-30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D6A84F]/15 border border-[#D6A84F]/40 text-[#D6A84F] text-xs font-semibold uppercase tracking-widest mb-4">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Structured Progression Curriculum</span>
+      </div>
+      <h1 class="font-serif-title text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
+        Chess Coaching <span class="gold-gradient-text">Programs</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+        From fundamental rules to deep grandmaster candidate-move calculations. Explore our tiered curricula designed
+        for every age group and rating target.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter & Search Toolbar (Non-sticky) -->
+  <section
+    class="py-6 sm:py-8 bg-slate-100 dark:bg-[#0E1726] border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+          <button type="button"
+            class="program-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-[#D6A84F] text-slate-900 shadow-md"
+            data-filter="all">
+            All Programs
+          </button>
+          <button type="button"
+            class="program-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:text-[#D6A84F]"
+            data-filter="beginner">
+            Beginner Level
+          </button>
+          <button type="button"
+            class="program-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:text-[#D6A84F]"
+            data-filter="intermediate">
+            Intermediate Level
+          </button>
+          <button type="button"
+            class="program-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-white dark:bg-[#131C2E] text-slate-700 dark:text-slate-300 hover:text-[#D6A84F]"
+            data-filter="advanced">
+            Advanced Level
+          </button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative w-full md:w-72">
+          <i
+            class="fa-solid fa-magnifying-glass absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 transform -translate-y-1/2 text-slate-400 text-xs"></i>
+          <input type="text" id="program-search" placeholder="Search programs or skills..."
+            class="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-2 rounded-xl text-xs sm:text-sm bg-white dark:bg-[#131C2E] border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 focus:outline-none focus:border-[#D6A84F]">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Catalog Grid -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="programs-grid">
+
+        <!-- 1. Beginner: Chess Fundamentals -->
+        <div
+          class="program-card bg-white dark:bg-[#131C2E] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group"
+          data-level="beginner">
+          <div class="relative h-48 overflow-hidden">
+            <img src="../assets/images/programs/beginner-chess.jpg" alt="Chess Fundamentals"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-emerald-500 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded shadow">
+              Beginner
+            </div>
+            <div
+              class="absolute bottom-3 right-3 rtl:right-auto rtl:left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">
+              <i class="fa-solid fa-laptop text-emerald-400 mr-1"></i> Hybrid Format
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-clock text-[#D6A84F]"></i> 6 Weeks (12 Sessions)
+              </div>
+              <h3
+                class="program-title text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Chess Fundamentals & Movement
+              </h3>
+              <p class="program-desc text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Designed for true beginners. Understand piece values, board coordinates, algebraic notation, and basic
+                legal moves.
+              </p>
+            </div>
+            <a href="program-details.html"
+              class="w-full py-2.5 text-center rounded-xl font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 group-hover:bg-[#D6A84F] group-hover:text-slate-950 transition-all text-xs uppercase tracking-wider">
+              Explore Program
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Beginner: Understanding Chess Pieces -->
+        <div
+          class="program-card bg-white dark:bg-[#131C2E] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group"
+          data-level="beginner">
+          <div class="relative h-48 overflow-hidden">
+            <img src="../assets/images/about/student-learning.jpg" alt="Understanding Chess Pieces"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-emerald-500 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded shadow">
+              Beginner
+            </div>
+            <div
+              class="absolute bottom-3 right-3 rtl:right-auto rtl:left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">
+              <i class="fa-solid fa-user-group text-emerald-400 mr-1"></i> Small Batch (Max 6)
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-clock text-[#D6A84F]"></i> 8 Weeks (16 Sessions)
+              </div>
+              <h3
+                class="program-title text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Understanding Chess Pieces
+              </h3>
+              <p class="program-desc text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Explore the unique powers, mobility limitations, piece coordination, and pawn promotion dynamics on the
+                chessboard.
+              </p>
+            </div>
+            <a href="program-details.html"
+              class="w-full py-2.5 text-center rounded-xl font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 group-hover:bg-[#D6A84F] group-hover:text-slate-950 transition-all text-xs uppercase tracking-wider">
+              Explore Program
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Beginner: Checkmate Fundamentals -->
+        <div
+          class="program-card bg-white dark:bg-[#131C2E] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group"
+          data-level="beginner">
+          <div class="relative h-48 overflow-hidden">
+            <img src="../assets/images/programs/chess-endgame.jpg" alt="Checkmate Fundamentals"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-emerald-500 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded shadow">
+              Beginner
+            </div>
+            <div
+              class="absolute bottom-3 right-3 rtl:right-auto rtl:left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">
+              <i class="fa-solid fa-location-dot text-emerald-400 mr-1"></i> On-Campus & Online
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-clock text-[#D6A84F]"></i> 8 Weeks (16 Sessions)
+              </div>
+              <h3
+                class="program-title text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Checkmate Patterns & Tactics
+              </h3>
+              <p class="program-desc text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Master essential mating nets: Queen-King mates, Rook ladders, back-rank checkmates, Scholar's mate
+                defense, and basic pins.
+              </p>
+            </div>
+            <a href="program-details.html"
+              class="w-full py-2.5 text-center rounded-xl font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 group-hover:bg-[#D6A84F] group-hover:text-slate-950 transition-all text-xs uppercase tracking-wider">
+              Explore Program
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Intermediate: Opening Principles -->
+        <div
+          class="program-card bg-white dark:bg-[#131C2E] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group"
+          data-level="intermediate">
+          <div class="relative h-48 overflow-hidden">
+            <img src="../assets/images/programs/chess-openings.jpg" alt="Opening Principles"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-blue-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded shadow">
+              Intermediate
+            </div>
+            <div
+              class="absolute bottom-3 right-3 rtl:right-auto rtl:left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">
+              <i class="fa-solid fa-trophy text-blue-400 mr-1"></i> Elo 1200 - 1600
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-clock text-[#D6A84F]"></i> 10 Weeks (20 Sessions)
+              </div>
+              <h3
+                class="program-title text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Opening Principles & Repertoire
+              </h3>
+              <p class="program-desc text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Fight for the center, develop knights before bishops, king safety timing, and core opening choices
+                (Italian Game, Caro-Kann, Queen's Gambit).
+              </p>
+            </div>
+            <a href="program-details.html"
+              class="w-full py-2.5 text-center rounded-xl font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 group-hover:bg-[#D6A84F] group-hover:text-slate-950 transition-all text-xs uppercase tracking-wider">
+              Explore Program
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Intermediate: Tactical Combinations -->
+        <div
+          class="program-card bg-white dark:bg-[#131C2E] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group"
+          data-level="intermediate">
+          <div class="relative h-48 overflow-hidden">
+            <img src="../assets/images/programs/intermediate-chess.jpg" alt="Tactical Combinations"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-blue-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded shadow">
+              Intermediate
+            </div>
+            <div
+              class="absolute bottom-3 right-3 rtl:right-auto rtl:left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">
+              <i class="fa-solid fa-trophy text-blue-400 mr-1"></i> Interactive Puzzles
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-clock text-[#D6A84F]"></i> 12 Weeks (24 Sessions)
+              </div>
+              <h3
+                class="program-title text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Tactical Combinations & Strategy
+              </h3>
+              <p class="program-desc text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Calculate multi-move forks, discovered attacks, deflections, windmills, interference, and knight
+                outposts in the middlegame.
+              </p>
+            </div>
+            <a href="program-details.html"
+              class="w-full py-2.5 text-center rounded-xl font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 group-hover:bg-[#D6A84F] group-hover:text-slate-950 transition-all text-xs uppercase tracking-wider">
+              Explore Program
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Intermediate: Endgame Techniques -->
+        <div
+          class="program-card bg-white dark:bg-[#131C2E] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group"
+          data-level="intermediate">
+          <div class="relative h-48 overflow-hidden">
+            <img src="../assets/images/about/coaching-session.jpg" alt="Endgame Techniques"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-blue-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded shadow">
+              Intermediate
+            </div>
+            <div
+              class="absolute bottom-3 right-3 rtl:right-auto rtl:left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">
+              <i class="fa-solid fa-trophy text-blue-400 mr-1"></i> Practical Drills
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-clock text-[#D6A84F]"></i> 8 Weeks (16 Sessions)
+              </div>
+              <h3
+                class="program-title text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Essential Endgame Techniques
+              </h3>
+              <p class="program-desc text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Opposition rule, square of the pawn, key squares, Rook and pawn basics (Philidor & Lucena position
+                mechanics).
+              </p>
+            </div>
+            <a href="program-details.html"
+              class="w-full py-2.5 text-center rounded-xl font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 group-hover:bg-[#D6A84F] group-hover:text-slate-950 transition-all text-xs uppercase tracking-wider">
+              Explore Program
+            </a>
+          </div>
+        </div>
+
+        <!-- 7. Advanced: Advanced Opening Preparation -->
+        <div
+          class="program-card bg-white dark:bg-[#131C2E] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group"
+          data-level="advanced">
+          <div class="relative h-48 overflow-hidden">
+            <img src="../assets/images/programs/advanced-chess.jpg" alt="Advanced Opening Preparation"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-purple-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded shadow">
+              Advanced / Master
+            </div>
+            <div
+              class="absolute bottom-3 right-3 rtl:right-auto rtl:left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">
+              <i class="fa-solid fa-chess-king text-purple-400 mr-1"></i> FIDE 1800+
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-clock text-[#D6A84F]"></i> 14 Weeks (28 Sessions)
+              </div>
+              <h3
+                class="program-title text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Advanced Opening Preparation
+              </h3>
+              <p class="program-desc text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Tailored computer-assisted opening books, novelty research, Sicilian Najdorf/Dragon depths, King's
+                Indian dynamics, and transposition tricks.
+              </p>
+            </div>
+            <a href="program-details.html"
+              class="w-full py-2.5 text-center rounded-xl font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 group-hover:bg-[#D6A84F] group-hover:text-slate-950 transition-all text-xs uppercase tracking-wider">
+              Explore Program
+            </a>
+          </div>
+        </div>
+
+        <!-- 8. Advanced: Calculation & Analysis -->
+        <div
+          class="program-card bg-white dark:bg-[#131C2E] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group"
+          data-level="advanced">
+          <div class="relative h-48 overflow-hidden">
+            <img src="../assets/images/hero/home-hero.jpg" alt="Deep Calculation and Analysis"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-purple-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded shadow">
+              Advanced / Master
+            </div>
+            <div
+              class="absolute bottom-3 right-3 rtl:right-auto rtl:left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">
+              <i class="fa-solid fa-chess-king text-purple-400 mr-1"></i> 1-on-1 Mentorship
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-clock text-[#D6A84F]"></i> 12 Weeks (24 Sessions)
+              </div>
+              <h3
+                class="program-title text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Calculation & Analysis Trees
+              </h3>
+              <p class="program-desc text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Structured candidate-move selection, elimination method, visualization under acute time trouble, and
+                prophylactic prophylaxis.
+              </p>
+            </div>
+            <a href="program-details.html"
+              class="w-full py-2.5 text-center rounded-xl font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 group-hover:bg-[#D6A84F] group-hover:text-slate-950 transition-all text-xs uppercase tracking-wider">
+              Explore Program
+            </a>
+          </div>
+        </div>
+
+        <!-- 9. Advanced: Competitive Tournament Training -->
+        <div
+          class="program-card bg-white dark:bg-[#131C2E] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group"
+          data-level="advanced">
+          <div class="relative h-48 overflow-hidden">
+            <img src="../assets/images/tournaments/tournament-main.jpg" alt="Tournament Preparation"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-3 left-3 rtl:left-auto rtl:right-3 bg-purple-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded shadow">
+              Advanced / Master
+            </div>
+            <div
+              class="absolute bottom-3 right-3 rtl:right-auto rtl:left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">
+              <i class="fa-solid fa-chess-king text-purple-400 mr-1"></i> Title Norm Prep
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-clock text-[#D6A84F]"></i> 16 Weeks (32 Sessions)
+              </div>
+              <h3
+                class="program-title text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#D6A84F] transition-colors">
+                Competitive Tournament Training
+              </h3>
+              <p class="program-desc text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Complete preparation for FIDE rated Opens and National Championships: opponent scouting, stamina
+                regimen, and psychological grit.
+              </p>
+            </div>
+            <a href="program-details.html"
+              class="w-full py-2.5 text-center rounded-xl font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 group-hover:bg-[#D6A84F] group-hover:text-slate-950 transition-all text-xs uppercase tracking-wider">
+              Explore Program
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- NEW SECTION 1: 4-STAGE MASTERY ROADMAP     -->
+  <!-- ========================================== -->
+  <section class="py-20 lg:py-28 bg-slate-50 dark:bg-[#0E1726]/60 border-t border-slate-200 dark:border-slate-800 relative overflow-hidden">
+    <!-- Subtle Background Elements -->
+    <div class="absolute inset-0 chess-board-pattern opacity-5 dark:opacity-10 pointer-events-none"></div>
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-[#D6A84F]/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D6A84F]/10 border border-[#D6A84F]/20 text-[#D6A84F] text-xs font-bold uppercase tracking-widest mb-4">
+          <i class="fa-solid fa-graduation-cap"></i> Structured Learning Pathway
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white font-serif tracking-tight mb-4">
+          The 4-Stage Mastery Progression
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
+          Our curriculum is engineered to transform beginner enthusiasts into battle-tested tournament contenders through systematic, milestone-driven development.
+        </p>
+      </div>
+
+      <!-- Roadmap Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Stage 01 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800/80 hover:border-emerald-500/50 shadow-sm hover:shadow-xl transition-all duration-300 relative group flex flex-col justify-between">
+          <div class="absolute top-5 right-5 font-black text-4xl text-slate-100 dark:text-slate-800/60 select-none group-hover:text-emerald-500/10 transition-colors">
+            01
+          </div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+            <div class="inline-block px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wide mb-2">
+              Rating: 0 – 1200
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">
+              Foundation & Rules
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+              Master piece mechanics, special rules (castling, en passant), board coordinate fluency, basic mating nets, and beginner tactical forks.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800/80 text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center justify-between">
+            <span>Milestone:</span>
+            <span class="text-emerald-600 dark:text-emerald-400 font-bold">First 100 Puzzles Solved</span>
+          </div>
+        </div>
+
+        <!-- Stage 02 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/50 shadow-sm hover:shadow-xl transition-all duration-300 relative group flex flex-col justify-between">
+          <div class="absolute top-5 right-5 font-black text-4xl text-slate-100 dark:text-slate-800/60 select-none group-hover:text-blue-500/10 transition-colors">
+            02
+          </div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-chess-knight"></i>
+            </div>
+            <div class="inline-block px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wide mb-2">
+              Rating: 1200 – 1600
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">
+              Strategic Repertoire
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+              Develop a structured opening repertoire with 1.e4 and 1.d4, learn pawn chain mechanics, outpost creation, and rook endgame essentials.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800/80 text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center justify-between">
+            <span>Milestone:</span>
+            <span class="text-blue-600 dark:text-blue-400 font-bold">Club Tournament Debut</span>
+          </div>
+        </div>
+
+        <!-- Stage 03 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800/80 hover:border-[#D6A84F]/50 shadow-sm hover:shadow-xl transition-all duration-300 relative group flex flex-col justify-between">
+          <div class="absolute top-5 right-5 font-black text-4xl text-slate-100 dark:text-slate-800/60 select-none group-hover:text-[#D6A84F]/10 transition-colors">
+            03
+          </div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#D6A84F]/10 text-[#D6A84F] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-chess-rook"></i>
+            </div>
+            <div class="inline-block px-2.5 py-1 rounded-md bg-[#D6A84F]/10 text-[#D6A84F] text-xs font-bold uppercase tracking-wide mb-2">
+              Rating: 1600 – 2000
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">
+              Deep Calculation
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+              Prophylactic thinking, candidate move tree pruning, king attack conversion, minor piece imbalances, and time trouble psychology.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800/80 text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center justify-between">
+            <span>Milestone:</span>
+            <span class="text-[#D6A84F] font-bold">Official FIDE Rating</span>
+          </div>
+        </div>
+
+        <!-- Stage 04 -->
+        <div class="bg-white dark:bg-[#131C2E] rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800/80 hover:border-purple-500/50 shadow-sm hover:shadow-xl transition-all duration-300 relative group flex flex-col justify-between">
+          <div class="absolute top-5 right-5 font-black text-4xl text-slate-100 dark:text-slate-800/60 select-none group-hover:text-purple-500/10 transition-colors">
+            04
+          </div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-chess-queen"></i>
+            </div>
+            <div class="inline-block px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wide mb-2">
+              Rating: 2000+ FIDE
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">
+              Master & Title Norms
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+              Novelty prep using modern neural engines, dynamic sacrifice evaluation, elite opening secret files, and 1-on-1 Grandmaster sparring.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800/80 text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center justify-between">
+            <span>Milestone:</span>
+            <span class="text-purple-600 dark:text-purple-400 font-bold">FM / IM / GM Title Norms</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Progression Footer Banner -->
+      <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white border border-slate-700/60 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-[#D6A84F]/20 text-[#D6A84F] flex items-center justify-center text-2xl shrink-0">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white mb-1">Average Student Rating Surge: +340 Elo in 12 Months</h4>
+            <p class="text-slate-300 text-sm">Over 92% of students enrolled in structured batches earn their initial FIDE rating within their first tournament season.</p>
+          </div>
+        </div>
+        <a href="coaches.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] text-slate-900 font-bold text-sm shrink-0 shadow-md transition-colors">
+          <span>Meet Our Mentors</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- NEW SECTION 2: CURRICULUM FAQ & ASSESSMENT -->
+  <!-- ========================================== -->
+  <section class="py-20 lg:py-28 bg-white dark:bg-[#0B1220]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+        <!-- Left Column: FAQ Accordion (7 cols) -->
+        <div class="lg:col-span-7">
+          <div class="mb-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 text-xs font-bold uppercase tracking-widest mb-4">
+              <i class="fa-solid fa-circle-question"></i> Answers & Inquiries
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white font-serif tracking-tight mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+              Everything you need to know about batch sizes, tournament prep, coach allocation, and our hybrid learning model.
+            </p>
+          </div>
+
+          <!-- FAQ Accordion Items -->
+          <div class="space-y-4">
+            
+            <!-- Item 1 -->
+            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#131C2E]/60 transition-colors">
+              <details class="group" open>
+                <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 dark:text-white text-base select-none">
+                  <span class="flex items-center gap-3">
+                    <i class="fa-solid fa-sliders text-[#D6A84F]"></i>
+                    How do you determine which program level I should start with?
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-sm text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="px-5 sm:px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-200/60 dark:border-slate-800/60 pt-4">
+                  Every new student completes a complimentary 30-minute diagnostic session with an International Master or senior coach. We review recent game PGNs, test tactical pattern recognition, and assess endgame knowledge to recommend the exact batch where you will be challenged and thrive.
+                </div>
+              </details>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#131C2E]/60 transition-colors">
+              <details class="group">
+                <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 dark:text-white text-base select-none">
+                  <span class="flex items-center gap-3">
+                    <i class="fa-solid fa-users text-[#D6A84F]"></i>
+                    What is the student-to-coach ratio in live group batches?
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-sm text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="px-5 sm:px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-200/60 dark:border-slate-800/60 pt-4">
+                  We limit all group batches to a strict maximum of 4 to 6 students. This guarantees personalized board interaction, real-time move validation by the master coach, and ample time for individual question-and-answer drills during every session.
+                </div>
+              </details>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#131C2E]/60 transition-colors">
+              <details class="group">
+                <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 dark:text-white text-base select-none">
+                  <span class="flex items-center gap-3">
+                    <i class="fa-solid fa-laptop text-[#D6A84F]"></i>
+                    Can I take both online and in-person academy classes?
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-sm text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="px-5 sm:px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-200/60 dark:border-slate-800/60 pt-4">
+                  Yes, our academy offers a fully synchronized hybrid training setup. You can attend in-person classes at our main campus in Manhattan, or join live interactive sessions from anywhere via our custom student portal with interactive digital chess boards.
+                </div>
+              </details>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#131C2E]/60 transition-colors">
+              <details class="group">
+                <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 dark:text-white text-base select-none">
+                  <span class="flex items-center gap-3">
+                    <i class="fa-solid fa-chess-board text-[#D6A84F]"></i>
+                    Do you provide live tournament coaching and game reviews?
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-sm text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="px-5 sm:px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-200/60 dark:border-slate-800/60 pt-4">
+                  Post-game analysis is the cornerstone of rapid chess improvement. When students compete in official weekend FIDE or USCF rated tournaments, our coaches dissect their notation scoresheets during Monday post-mortem clinics, identifying missed tactics and opening pitfalls.
+                </div>
+              </details>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/60 dark:bg-[#131C2E]/60 transition-colors">
+              <details class="group">
+                <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 dark:text-white text-base select-none">
+                  <span class="flex items-center gap-3">
+                    <i class="fa-solid fa-award text-[#D6A84F]"></i>
+                    Will I receive an official academy completion certificate?
+                  </span>
+                  <i class="fa-solid fa-chevron-down text-sm text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="px-5 sm:px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-200/60 dark:border-slate-800/60 pt-4">
+                  Yes, upon completing all curriculum milestones, passing the tactical graduation exam, and completing batch sparring requirements, students earn a verified Academy Certificate signed by GM Alexander Ivanov and their batch master.
+                </div>
+              </details>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Free Skill Assessment Consultation Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="sticky top-28 bg-gradient-to-b from-[#131C2E] to-[#0B1220] text-white rounded-3xl p-8 sm:p-10 border-2 border-[#D6A84F]/40 shadow-2xl relative overflow-hidden">
+            <!-- Glow background -->
+            <div class="absolute -top-20 -right-20 w-60 h-60 bg-[#D6A84F]/15 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="relative z-10">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D6A84F]/20 text-[#D6A84F] text-xs font-bold uppercase tracking-wider mb-6">
+                <i class="fa-solid fa-sparkles"></i> Complimentary Consultation
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl font-black font-serif text-white mb-3">
+                Book a Free Skill Assessment
+              </h3>
+
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Not sure which tier matches your current playing level? Spend 30 minutes 1-on-1 with a Grandmaster coach to pinpoint your tactical blind spots.
+              </p>
+
+              <!-- Value Points -->
+              <div class="space-y-3.5 mb-8">
+                <div class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs mt-0.5 shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="text-xs sm:text-sm text-slate-200">Full 30-minute diagnostic game analysis</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs mt-0.5 shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="text-xs sm:text-sm text-slate-200">Custom opening & endgame study plan</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs mt-0.5 shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="text-xs sm:text-sm text-slate-200">Precise batch placement recommendation</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs mt-0.5 shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="text-xs sm:text-sm text-slate-200">Zero cost, no credit card required</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="space-y-3">
+                <a href="contact.html?subject=Skill+Assessment" class="block w-full text-center py-3.5 px-6 rounded-xl bg-[#D6A84F] hover:bg-[#b88c3a] text-slate-900 font-bold text-sm shadow-lg transition-transform hover:-translate-y-0.5">
+                  Request Free Assessment <i class="fa-solid fa-calendar-check ml-1.5"></i>
+                </a>
+                <a href="schedule.html" class="block w-full text-center py-3 px-6 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs transition-colors">
+                  View Upcoming Batch Timetable
+                </a>
+              </div>
+
+              <!-- Coach Endorsement -->
+              <div class="mt-8 pt-6 border-t border-slate-700/60 flex items-center gap-3">
+                <img src="../assets/images/coaches/coach-1.jpg" alt="GM Alexander Ivanov" class="w-10 h-10 rounded-full object-cover border border-[#D6A84F]/40">
+                <div class="text-xs">
+                  <div class="font-bold text-white">GM Alexander Ivanov</div>
+                  <div class="text-slate-400">Head Coach & FIDE Master Trainer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer Container -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/programs.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
